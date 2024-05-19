@@ -17,7 +17,6 @@ struct Node{
 
 class Search {
     public: 
-    double evaluate(const vector<int>&); 
     double evaluate(const unordered_map<int, bool>&);
     unordered_map<int, bool> greedyForward(int); 
     unordered_map<int, bool> greedyBackward(int);

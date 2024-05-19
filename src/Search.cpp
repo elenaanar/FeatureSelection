@@ -1,17 +1,18 @@
 #include "Search.h"
 
-double Search::evaluate(const vector<int>& subset){
-    return static_cast<double>(rand()) / RAND_MAX;
-}
-
 double Search::evaluate(const unordered_map<int, bool>& subset){
     return static_cast<double>(rand()) / RAND_MAX;
 }
 
 void printFeatures(const unordered_map<int, bool>& subset, double accuracy) {
     cout << "Using features {";
-    for (auto it = subset.begin(); it != subset.end(); ++it) {
-        cout << it->first << " ";
+    auto it = subset.begin();
+    for (size_t i = 0; it != subset.end(); ++it, ++i) {
+        if (i < subset.size() - 1) {
+            cout << it->first << " ";
+        } else {
+            cout << it->first;
+        }
     }
     cout << "} accuracy is: " << accuracy * 100 << "%" << endl;
 }
@@ -60,8 +61,6 @@ unordered_map<int, bool> Search::greedyBackward(int totalFeatures){
     return globalBestSubset; 
 }
 
-
-
 unordered_map<int, bool> Search::greedyForward(int totalFeatures){
     srand(time(NULL));
     cout << "--------------------------" << endl; //added for clarity
@@ -103,25 +102,3 @@ unordered_map<int, bool> Search::greedyForward(int totalFeatures){
 
     return bestSubset; 
 }
-
-// int main(){
-//     int features = 4; 
-//     Search search; 
-//     unordered_map<int, bool> map1 = search.greedyForward(features);
-//     unordered_map<int, bool> map2 = search.greedyBackward(features);
-
-//     for(auto it = map1.begin(); it != map1.end(); ++it){
-//         cout << it->first << " "; 
-//     }
-//     if(map1.size() == 0){
-//         cout << "No features selected." << endl;
-//     }
-//     cout << endl;
-//     for (auto it = map2.begin(); it != map2.end(); ++it){
-//         cout << it->first << " "; 
-//     }
-//     if(map2.size() == 0){
-//         cout << "No features selected." << endl;
-//     }
-//     return 0;
-// }
