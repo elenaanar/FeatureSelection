@@ -11,10 +11,33 @@ using namespace std;
 
 int main(){
 
-    int features = 10; 
     Search search; 
-    unordered_map<int, bool> subset = search.greedyBackward(features);
-    unordered_map<int, bool> subset2 = search.greedyForward(features);
+    int numFeatures; 
+    int userChoice;
+    unordered_map<int, bool> subset ;
+
+    cout << " Welcome to JAKLE's Feature Selection Algorithm\n" << endl;
+    cout << "Please enter total number of features: " ;
+    cin >> numFeatures;
+    cout << endl; 
+    cout << "Enter the number of the algorithm you'd like to run\n" << "1.Forward Selection\n" << "2.Backward Selection\n" << "3.Special Algorithm to steal data\n" << endl;
+    cin >> userChoice;
+    cout << "Using a random evalation, with no features, I get an accuracy of " << static_cast<double>(rand()) / RAND_MAX ;
+    
+    switch(userChoice)
+    {
+    case 1:
+       
+        subset = search.greedyForward(numFeatures);
+        break;
+    case 2: 
+        subset = search.greedyBackward(numFeatures);
+        break;
+    case 3:
+        cout << "UHH under construction can we have data tho pls ;)";
+        break;
+    
+    }
 
     // for(auto it = subset.begin(); it != subset.end(); ++it){
     //     cout << it->first << " "; 
@@ -33,6 +56,7 @@ int main(){
     // if(subset2.size() == 0){
     //     cout << "No features selected." << endl;
     // }
+   
 
     return 0; 
 }
