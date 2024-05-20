@@ -22,7 +22,7 @@ int main(){
     cout << endl; 
     cout << "Enter the number of the algorithm you'd like to run\n" << "1.Forward Selection\n" << "2.Backward Selection\n" << "3.Special Algorithm to steal data\n" << endl;
     cin >> userChoice;
-    cout << "Using a random evalation, with no features, I get an accuracy of " << static_cast<double>(rand()) / RAND_MAX ;
+    cout << "Using a random evalation, with no features, I get an accuracy of " << static_cast<double>(rand()) / RAND_MAX  << endl;
     
     switch(userChoice)
     {
@@ -34,7 +34,7 @@ int main(){
         subset = search.greedyBackward(numFeatures);
         break;
     case 3:
-        cout << "UHH under construction can we have data tho pls ;)";
+        cout << "UHH under construction can we have data tho pls ;)\n";
         break;
     
     }
