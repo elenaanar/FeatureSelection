@@ -47,7 +47,7 @@ unordered_map<int, bool> Search::greedyBackward(int totalFeatures){
         }
         if (worstFeature != -1){ //if we found a worst feature to delete
             currSubset.erase(worstFeature);
-            if(currBestAcc > globalBestAcc){ //check if this is an overall better subset
+            if(currBestAcc >= globalBestAcc){ //check if this is an overall better subset
                 globalBestAcc = currBestAcc; 
                 globalBestSubset = currSubset; 
                 bestAccuracy = globalBestAcc;
