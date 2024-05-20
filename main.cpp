@@ -29,24 +29,34 @@ int main(){
     case 1:
        
         subset = search.greedyForward(numFeatures);
+        cout << " Search Finished ! The best feature subset was {" ;
+        for(auto it = subset.begin(); it != subset.end(); ++it){
+            cout << it->first << " "; 
+        }
+
+        if(subset.size() == 0){
+            cout << "No features selected." << endl;
+        }
+        cout << "} with an accuracy of " << search.bestAccuracy * 100 << "%";
         break;
     case 2: 
         subset = search.greedyBackward(numFeatures);
+          cout << " Search Finished ! The best feature subset was {" ;
+        for(auto it = subset.begin(); it != subset.end(); ++it){
+            cout << it->first << " "; 
+        }
+
+        if(subset.size() == 0){
+            cout << "No features selected." << endl;
+        }
+        cout << "} with an accuracy of " << search.bestAccuracy * 100 << "%";
         break;
     case 3:
         cout << "UHH under construction can we have data tho pls ;)\n";
         break;
     
     }
-
-    // for(auto it = subset.begin(); it != subset.end(); ++it){
-    //     cout << it->first << " "; 
-    // }
-
-    // if(subset.size() == 0){
-    //     cout << "No features selected." << endl;
-    // }
-
+  
     // cout << endl;
 
     // for(auto it = subset2.begin(); it != subset2.end(); ++it){

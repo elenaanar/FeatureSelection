@@ -50,14 +50,15 @@ unordered_map<int, bool> Search::greedyBackward(int totalFeatures){
             if(currBestAcc > globalBestAcc){ //check if this is an overall better subset
                 globalBestAcc = currBestAcc; 
                 globalBestSubset = currSubset; 
+                bestAccuracy = globalBestAcc;
             }
             cout << endl << "Best subset this round: ";
             printFeatures(currSubset, currBestAcc); 
             cout << endl;
         }
     }
-    cout << "Best subset:" << endl;
-    printFeatures(globalBestSubset, globalBestAcc);
+    
+   // printFeatures(globalBestSubset, globalBestAcc);
     return globalBestSubset; 
 }
 
@@ -93,12 +94,13 @@ unordered_map<int, bool> Search::greedyForward(int totalFeatures){
             if(currBestAcc > bestAcc){ //check if this is an overall better subset
                 bestAcc = currBestAcc; 
                 bestSubset = currSubset; 
+                bestAccuracy = bestAcc;
             }
             cout << endl << "Best subset: ";
             printFeatures(currSubset, currBestAcc);
             cout << endl;
         }
     }
-
+    
     return bestSubset; 
 }

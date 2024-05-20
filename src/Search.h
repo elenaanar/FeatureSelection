@@ -20,6 +20,7 @@ class Search {
     double evaluate(const unordered_map<int, bool>&);
     unordered_map<int, bool> greedyForward(int); 
     unordered_map<int, bool> greedyBackward(int);
+    double bestAccuracy;
 };
 
 #endif
