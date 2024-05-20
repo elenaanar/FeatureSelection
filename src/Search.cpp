@@ -61,7 +61,7 @@ unordered_map<int, bool> Search::greedyBackward(int totalFeatures){
     return globalBestSubset; 
 }
 
-unordered_map<int, bool> Search::greedyForward(int totalFeatures){
+unordered_map<int, bool> Search::greedyForward(int totalFeatures) {
     srand(time(NULL));
     cout << "--------------------------" << endl; //added for clarity
     cout << "Greedy Forward Search:" << endl;
@@ -82,7 +82,7 @@ unordered_map<int, bool> Search::greedyForward(int totalFeatures){
 
                 double a = evaluate(tempset); 
                 printFeatures(tempset, a);
-                if (a > currBestAcc){ //if feature yields more accuracy than last, set as best feat
+                if (a > currBestAcc){ //if feature yields more accuracy than last, set as best fea
                     currBestAcc = a; 
                     bestFeature = j; 
                 }
@@ -90,15 +90,17 @@ unordered_map<int, bool> Search::greedyForward(int totalFeatures){
         }
         if (bestFeature != -1){ //if we found a best feature to add
             currSubset[bestFeature] = true;
-            if(currBestAcc > bestAcc){ //check if this is an overall better subset
+            if (currBestAcc > bestAcc) { // check if this is an overall better subset
                 bestAcc = currBestAcc; 
                 bestSubset = currSubset; 
+            } else {
+                // Stop the loop when the best local accuracy is worse than the global accuracy
+                break;
             }
             cout << endl << "Best subset: ";
             printFeatures(currSubset, currBestAcc);
             cout << endl;
         }
     }
-
     return bestSubset; 
 }
