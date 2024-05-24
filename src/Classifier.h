@@ -12,14 +12,16 @@ using namespace std;
 class Classifier {
     private:
         vector<vector<double> > data; //2D vector to store data, index is the id and the first point in the sub array is the class.
+        vector<vector<double> > normalizingData;
         int numFeatures;
     public:
         Classifier(int numFeatures);
-        double distance(int id1, int id2);
+        double distance(vector<double>&, int id2);
         void train(string dataLoc);
         int test(int id);
-        int test(const vector<double>& features);
+        int test(vector<double>& features);
         void normalize(int col);
+        void normalizeFeatures(vector<double>& features);
         void print();
 };
 

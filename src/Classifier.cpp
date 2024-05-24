@@ -51,7 +51,7 @@ void Classifier::train(string dataLoc) {
         }
     }
     inputFile.close();
-
+    // print();
     //normalize the data to fit between 0 and 1 for all features
     //starting at 1 so that we dont normalize the class
     for(int i = 1; i <= numFeatures; i++){
@@ -62,19 +62,75 @@ void Classifier::train(string dataLoc) {
     print();
 }
 // Predict the class label for a given feature vector
-int Classifier::test(const std::vector<double>& features) {
-    // TODO: Implement predict function
-    return 0; // Placeholder return value
+int Classifier::test(vector<double>& features) {
+    // Print the feature vector
+    cout << "Feature vector: ";
+    for (int i = 0; i < features.size(); i++) {
+        cout << features[i] << " ";
+    }
+    // Normalize the features
+    normalizeFeatures(features);
+
+    // Print the normalized feature vector
+    cout << "\nNormalized feature vector: ";
+    for (int i = 0; i < features.size(); i++) {
+        cout << features[i] << " ";
+    }
+    // Calculate the distances between the given features and all data points
+    // Find the index of the closest neighbor
+    std::vector<double> distances;
+    double minDistance = INT_MAX;
+    int closestNeighborIndex = 0;
+    for (int i = 0; i < data.size(); i++) {
+        double dist = distance(features, i);
+        distances.push_back(dist);
+        if (distances[i] < minDistance) {
+            minDistance = distances[i];
+            closestNeighborIndex = i;
+        }
+    }
+    
+    // Return the class label of the closest neighbor
+    cout << "Closest neighbor: " << closestNeighborIndex << endl;
+    return data[closestNeighborIndex][0];
 }
 
 int Classifier::test(int id){
-    // TODO: Implement predict function
-    return 0; // Placeholder return value
+    // Calculate the distances between the given features and all data points
+    // Find the index of the closest neighbor
+    std::vector<double> distances;
+    double minDistance = INT_MAX;
+    int closestNeighborIndex = 0;
+    for (int i = 0; i < data.size(); i++) {
+        if(id != i){
+            double dist = distance(data[id], i);
+            cout << i << " " << dist << endl;
+            distances.push_back(dist);
+            if (distances[distances.size() - 1] < minDistance) {
+                minDistance = distances[distances.size() - 1];
+                closestNeighborIndex = i;
+            }
+        }
+    }
+    cout << closestNeighborIndex << endl;
+    // Return the class label of the closest neighbor
+    return data[closestNeighborIndex][0];
 }
 
 // Calculate the Euclidean distance between two data points
-double Classifier::distance(int id1, int id2) {
-    return 0.0;
+double Classifier::distance(vector<double>& features, int id2) {
+    // Get the feature vector corresponding to the given id
+    vector<double>& featureVector = data[id2];
+
+    // Calculate the Euclidean distance between the two feature vectors
+    double sum = 0.0;
+    for (int i = 1; i <=numFeatures; i++) {
+        double diff = features[i-(featureVector.size() - features.size())] - featureVector[i];
+        sum += diff * diff;
+    }
+    double distance = sqrt(sum);
+
+    return distance;
 }
 
 // Normalize the data
@@ -91,11 +147,23 @@ void Classifier::normalize(int col) {
             maxVal = value;
         }
     }
-    
+    vector<double> temp;
+    temp.push_back(minVal);
+    temp.push_back(maxVal);
+    normalizingData.push_back(temp);
     // Normalize the values in the specified column
     for (auto& featureVector : data) {
         double value = featureVector[col];
         double normalizedValue = (value - minVal) / (maxVal - minVal);
         featureVector[col] = normalizedValue;
+    }
+}
+
+// Normalize the features
+void Classifier::normalizeFeatures(vector<double>& features) {
+    for (int i = 0; i < numFeatures; i++) {
+        double value = features[i];
+        double normalizedValue = (value - normalizingData[i][0]) / (normalizingData[i][1] - normalizingData[i][0]);
+        features[i] = normalizedValue;
     }
 }
