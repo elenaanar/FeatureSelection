@@ -75,6 +75,6 @@ using namespace std;
 
 int main(){
     Classifier classifier(10); //change num features depending on the dataset
-    classifier.train("data/small-test-dataset.txt");
+    classifier.train("data/small-test-dataset.txt"); 
     return 0;
 }
