@@ -63,58 +63,11 @@ void Classifier::train(string dataLoc) {
 }
 // Predict the class label for a given feature vector
 int Classifier::test(vector<double>& features) {
-    // Print the feature vector
-    cout << "Feature vector: ";
-    for (int i = 0; i < features.size(); i++) {
-        cout << features[i] << " ";
-    }
-    // Normalize the features
-    normalizeFeatures(features);
-
-    // Print the normalized feature vector
-    cout << "\nNormalized feature vector: ";
-    for (int i = 0; i < features.size(); i++) {
-        cout << features[i] << " ";
-    }
-    // Calculate the distances between the given features and all data points
-    // Find the index of the closest neighbor
-    std::vector<double> distances;
-    double minDistance = INT_MAX;
-    int closestNeighborIndex = 0;
-    for (int i = 0; i < data.size(); i++) {
-        double dist = distance(features, i);
-        distances.push_back(dist);
-        if (distances[i] < minDistance) {
-            minDistance = distances[i];
-            closestNeighborIndex = i;
-        }
-    }
-    
-    // Return the class label of the closest neighbor
-    cout << "Closest neighbor: " << closestNeighborIndex << endl;
-    return data[closestNeighborIndex][0];
+   return 0;
 }
 
 int Classifier::test(int id){
-    // Calculate the distances between the given features and all data points
-    // Find the index of the closest neighbor
-    std::vector<double> distances;
-    double minDistance = INT_MAX;
-    int closestNeighborIndex = 0;
-    for (int i = 0; i < data.size(); i++) {
-        if(id != i){
-            double dist = distance(data[id], i);
-            cout << i << " " << dist << endl;
-            distances.push_back(dist);
-            if (distances[distances.size() - 1] < minDistance) {
-                minDistance = distances[distances.size() - 1];
-                closestNeighborIndex = i;
-            }
-        }
-    }
-    cout << closestNeighborIndex << endl;
-    // Return the class label of the closest neighbor
-    return data[closestNeighborIndex][0];
+   return 0;
 }
 
 // Calculate the Euclidean distance between two data points
