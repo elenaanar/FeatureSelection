@@ -27,7 +27,6 @@ void Classifier::print(){
     }
 }
 
-
 // Train the classifier
 void Classifier::train(string dataLoc) {
     // Read in the data file
@@ -63,22 +62,42 @@ void Classifier::train(string dataLoc) {
     //printing the data vector
     print();
 }
+
 // Predict the class label for a given feature vector
 // This is for a user to use to predict label for new data
 int Classifier::test(vector<double>& features) {
     // Normalize the features
+    normalizeFeatures(features);
 
     // Find the nearest neighbor
 
     // Return the class label of the nearest neighbor
-   return 0;
+   return nn(features);
+}
+
+int Classifier::nn(vector<double>& features){
+    int nnclass = -1; //might need to be float? 
+    double minDist = 999.99;
+        //for nearest neighbor, go through every data point (row)
+        //see which has closest features (euclid)
+        
+        for (int row = 0; row < data.size(); ++row){
+            //if the next neighbor checked has a smaller dist, make that 
+            //the new nnclass
+            double temp = distance(features, row); 
+            if (temp < minDist){
+                minDist = temp;
+                nnclass = static_cast<int>(data[row][0]);//1st col is class
+            }
+        }
+    return nnclass;
 }
 
 // Predict the class label for a given id
 // This is for the validator to use to predict label for the test data
 int Classifier::test(int id){
     // No need to normalize the features since they are already normalized
-
+    
     // Find the nearest neighbor
     // Remember to skip the id itself
     

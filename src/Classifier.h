@@ -22,11 +22,13 @@ class Classifier {
         void train(string dataLoc);
         int test(int id);
         int test(vector<double>& features);
+    private: 
         void normalize(int col);
         void normalizeFeatures(vector<double>& features);
         void print();
         int getNumFeatures();
         int getNumDataPoints();
+        int nn(vector<double> &);
 };
 
 #endif
