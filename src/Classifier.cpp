@@ -3,7 +3,6 @@
 // Constructor
 Classifier::Classifier(vector<int> featureSubsetInput) {
     featureSubset = featureSubsetInput;
-    
 }
 
 // Train the classifier
@@ -58,12 +57,17 @@ int Classifier::test(vector<double>& features) {
 // This is for the validator to use to predict label for the test data
 int Classifier::test(int id){
     // No need to normalize the features since they are already normalized
+    if(id < 0 || id >= data.size()){
+        throw out_of_range("ID is out of bounds!");
+        return -1; 
+    }
     
     // Find the nearest neighbor
     // Remember to skip the id itself
+
     
     // Return the class label of the nearest neighbor
-    return 0;
+    return nn(id);
 }
 
 
@@ -129,22 +133,29 @@ void Classifier::normalize(int col) {
     }
 }
 
-int Classifier::nn(vector<double>& features){
-    int nnclass = -1; //might need to be float? 
+int Classifier::nn(vector<double>& features, int excludeRow) {
+    int nnclass = -1;
     double minDist = numeric_limits<double>::max();
-        //for nearest neighbor, go through every data point (row)
-        //see which has closest features (euclid)
-        
-        for (int row = 0; row < data.size(); ++row){
-            //if the next neighbor checked has a smaller dist, make that 
-            //the new nnclass
-            double temp = distance(features, row); 
-            if (temp < minDist){
+
+    for (size_t row = 0; row < data.size(); ++row) {
+        if (row != excludeRow) {
+             double temp = distance(features, row);
+            if (temp < minDist) {
                 minDist = temp;
-                nnclass = static_cast<int>(data[row][0]);//1st col is class
+                nnclass = static_cast<int>(data[row][0]);
             }
         }
+    }
     return nnclass;
+}
+
+int Classifier::nn(int row) {
+    if (row < 0 || row >= data.size()) {
+        throw out_of_range("Row index is out of bounds");
+    }
+    //features of that row
+    vector<double> features(data[row].begin() + 1, data[row].end()); 
+    return nn(features, row);
 }
 
 // Normalize the features

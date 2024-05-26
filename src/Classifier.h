@@ -22,12 +22,13 @@ class Classifier {
         int test(int id);
         int test(vector<double>& features);
         void print();
+        int getNumFeatures();
+        int getNumDataPoints();
     private: 
         void normalize(int col);
         void normalizeFeatures(vector<double>& features);
-        int getNumFeatures();
-        int getNumDataPoints();
-        int nn(vector<double> &);
+        int nn(vector<double> &, int excludeRow = -1);
+        int nn(int);
         double distance(const vector<double>&, int id2) const;
 };
 

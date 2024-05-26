@@ -101,7 +101,8 @@ int main(){
     features.push_back(3.36);
     features.push_back(4.03);
     features.push_back(2.85);
-    //cout << classifier.test(features) << endl;
+
+    cout << "Found class to be: " << classifier.test(features) << endl; 
     return 0;
 
 }
