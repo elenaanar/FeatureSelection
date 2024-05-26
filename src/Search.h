@@ -1,26 +1,39 @@
+#include <fstream>
 #include <iostream>
-#include <vector>
-#include <cstdlib>
-#include <ctime>
-#include <algorithm>
+#include <sstream>
 #include <unordered_map>
+#include <vector>
 
-#ifndef _SEARCH_H_
-#define _SEARCH_H_
 using namespace std;
 
-struct Node{
-    string name;
-    vector<int> subset; 
-    double acc; 
-};
+#ifndef CLASSIFIER_H
+#define CLASSIFIER_H
 
-class Search {
-    public: 
-    double evaluate(const unordered_map<int, bool>&);
-    unordered_map<int, bool> greedyForward(int); 
-    unordered_map<int, bool> greedyBackward(int);
-    double bestAccuracy;
+class Classifier {
+private:
+  vector<vector<double>>
+      data; // 2D vector to store data, index is the id and // the first point
+            // in     the sub array is the class.
+  vector<vector<double>> normalizingData;
+  vector<int> featureSubset;
+  int numDataPoints;
+  int numFeatures;
+
+public:
+  Classifier(vector<int> featureSubsetInput);
+  void train(string dataLoc);
+  int test(int id);
+  int test(vector<double> &features);
+  void print();
+  int getNumFeatures();
+  int getNumDataPoints();
+  const vector<vector<double>>& getData() const; 
+
+private:
+  void normalize(int col);
+  void normalizeFeatures(vector<double> &features);
+  int nn(vector<double> &);
+  double distance(const vector<double> &, int id2) const;
 };
 
 #endif
