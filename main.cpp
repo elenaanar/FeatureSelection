@@ -74,9 +74,20 @@ using namespace std;
 // }
 
 int main(){
-    Classifier classifier(10); //change num features depending on the dataset
+    vector<int> featureSubset;
+    featureSubset.push_back(1);
+    featureSubset.push_back(2);
+    featureSubset.push_back(3);
+    featureSubset.push_back(4);
+    featureSubset.push_back(5);
+    featureSubset.push_back(6);
+    featureSubset.push_back(7);
+    featureSubset.push_back(8);
+    featureSubset.push_back(9);
+    featureSubset.push_back(10);
+    Classifier classifier(featureSubset); //change num features depending on the dataset
     classifier.train("data/small-test-dataset.txt"); 
-    cout << classifier.test(0) << endl;
+    //cout << classifier.test(0) << endl;
     vector<double> features;
     //{5.07, 3.14, 1.29, 0.58, 2.73, 1.91, 4.60, 3.36, 4.03, 2.85}
     //datapoint 0 copied from the dataset
@@ -90,7 +101,7 @@ int main(){
     features.push_back(3.36);
     features.push_back(4.03);
     features.push_back(2.85);
-    cout << classifier.test(features) << endl;
+    //cout << classifier.test(features) << endl;
     return 0;
 
 }

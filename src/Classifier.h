@@ -13,9 +13,11 @@ class Classifier {
     private:
         vector<vector<double> > data; //2D vector to store data, index is the id and the first point in the sub array is the class.
         vector<vector<double> > normalizingData;
+        vector<int> featureSubset;
+        int numDataPoints;
         int numFeatures;
     public:
-        Classifier(int numFeatures);
+        Classifier(vector<int> featureSubsetInput);
         double distance(vector<double>&, int id2);
         void train(string dataLoc);
         int test(int id);
@@ -23,6 +25,8 @@ class Classifier {
         void normalize(int col);
         void normalizeFeatures(vector<double>& features);
         void print();
+        int getNumFeatures();
+        int getNumDataPoints();
 };
 
 #endif

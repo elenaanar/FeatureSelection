@@ -1,8 +1,9 @@
 #include "Classifier.h"
 
 // Constructor
-Classifier::Classifier(int num) {
-    numFeatures = num;
+Classifier::Classifier(vector<int> featureSubsetInput) {
+    featureSubset = featureSubsetInput;
+    
 }
 
 // Function to print a 2D vector with the index as the id
@@ -39,19 +40,20 @@ void Classifier::train(string dataLoc) {
     // Read data from file and store in vector
     string mystring;
     std::vector<double> featureVector;
-    int count = 0;
-    while (inputFile >> mystring) {
-        double value = std::stod(mystring);
-        featureVector.push_back(value);
-        count++;
-        if (count == numFeatures + 1) {
-            data.push_back(featureVector);
-            featureVector.clear();
-            count = 0;
+    // Get lines from the file, turn to double and then add to the feature vector
+    while (getline(inputFile, mystring)) {
+        istringstream ss(mystring);
+        double value;
+        while (ss >> value) {
+            featureVector.push_back(value);
         }
+        data.push_back(featureVector);
+        featureVector.clear();
     }
+    // Get the number of features
+    numFeatures = data[0].size() - 1;
     inputFile.close();
-    // print();
+    //print();
     //normalize the data to fit between 0 and 1 for all features
     //starting at 1 so that we dont normalize the class
     for(int i = 1; i <= numFeatures; i++){
@@ -62,12 +64,26 @@ void Classifier::train(string dataLoc) {
     print();
 }
 // Predict the class label for a given feature vector
+// This is for a user to use to predict label for new data
 int Classifier::test(vector<double>& features) {
+    // Normalize the features
+
+    // Find the nearest neighbor
+
+    // Return the class label of the nearest neighbor
    return 0;
 }
 
+// Predict the class label for a given id
+// This is for the validator to use to predict label for the test data
 int Classifier::test(int id){
-   return 0;
+    // No need to normalize the features since they are already normalized
+
+    // Find the nearest neighbor
+    // Remember to skip the id itself
+    
+    // Return the class label of the nearest neighbor
+    return 0;
 }
 
 // Calculate the Euclidean distance between two data points
@@ -77,12 +93,13 @@ double Classifier::distance(vector<double>& features, int id2) {
 
     // Calculate the Euclidean distance between the two feature vectors
     double sum = 0.0;
-    for (int i = 1; i <=numFeatures; i++) {
-        double diff = features[i-(featureVector.size() - features.size())] - featureVector[i];
+    for (int i = 0; i < featureSubset.size(); i++) {
+        double diff = features[featureSubset[i] - (featureVector.size() - features.size())] - featureVector[featureSubset[i]];
         sum += diff * diff;
     }
-    double distance = sqrt(sum);
 
+    // Return the square root of the sum
+    double distance = sqrt(sum);
     return distance;
 }
 
@@ -119,4 +136,14 @@ void Classifier::normalizeFeatures(vector<double>& features) {
         double normalizedValue = (value - normalizingData[i][0]) / (normalizingData[i][1] - normalizingData[i][0]);
         features[i] = normalizedValue;
     }
+}
+
+// Get the number of features
+int Classifier::getNumFeatures() {
+    return numFeatures;
+}
+
+// Get the number of data points
+int Classifier::getNumDataPoints() {
+    return numDataPoints;
 }
