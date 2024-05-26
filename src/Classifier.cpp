@@ -70,6 +70,15 @@ int Classifier::test(int id){
     return nn(id);
 }
 
+// Get the number of features
+int Classifier::getNumFeatures() {
+    return numFeatures;
+}
+
+// Get the number of data points
+int Classifier::getNumDataPoints() {
+    return numDataPoints;
+}
 
 //---------------------------------------
 //           PRIVATE HELPERS
@@ -186,14 +195,4 @@ void Classifier::print(){
         }
         cout << endl;
     }
-}
-
-// Get the number of features
-int Classifier::getNumFeatures() {
-    return numFeatures;
-}
-
-// Get the number of data points
-int Classifier::getNumDataPoints() {
-    return numDataPoints;
 }
