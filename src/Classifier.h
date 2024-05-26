@@ -18,7 +18,6 @@ class Classifier {
         int numFeatures;
     public:
         Classifier(vector<int> featureSubsetInput);
-        double distance(vector<double>&, int id2);
         void train(string dataLoc);
         int test(int id);
         int test(vector<double>& features);
@@ -29,6 +28,7 @@ class Classifier {
         int getNumFeatures();
         int getNumDataPoints();
         int nn(vector<double> &);
+        double distance(const vector<double>&, int id2) const;
 };
 
 #endif

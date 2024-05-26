@@ -6,27 +6,6 @@ Classifier::Classifier(vector<int> featureSubsetInput) {
     
 }
 
-// Function to print a 2D vector with the index as the id
-void Classifier::print(){
-    // Print the table header
-    cout << "---------------------------------------------------------------------------------------------" << endl;
-    printf("ID\tClass\t");
-    for (int i = 1; i <= numFeatures; i++) {
-        printf("F_%d\t", i);
-    }
-    printf("\n");
-    cout << "---------------------------------------------------------------------------------------------" << endl;
-
-    // Print the table rows
-    for (int i = 0; i < data.size(); i++) {
-        printf("%d\t", i);
-        for (int j = 0; j < data[i].size(); j++) {
-            printf("%.2f\t", data[i][j]);
-        }
-        cout << endl;
-    }
-}
-
 // Train the classifier
 void Classifier::train(string dataLoc) {
     // Read in the data file
@@ -75,24 +54,6 @@ int Classifier::test(vector<double>& features) {
    return nn(features);
 }
 
-int Classifier::nn(vector<double>& features){
-    int nnclass = -1; //might need to be float? 
-    double minDist = 999.99;
-        //for nearest neighbor, go through every data point (row)
-        //see which has closest features (euclid)
-        
-        for (int row = 0; row < data.size(); ++row){
-            //if the next neighbor checked has a smaller dist, make that 
-            //the new nnclass
-            double temp = distance(features, row); 
-            if (temp < minDist){
-                minDist = temp;
-                nnclass = static_cast<int>(data[row][0]);//1st col is class
-            }
-        }
-    return nnclass;
-}
-
 // Predict the class label for a given id
 // This is for the validator to use to predict label for the test data
 int Classifier::test(int id){
@@ -105,21 +66,41 @@ int Classifier::test(int id){
     return 0;
 }
 
-// Calculate the Euclidean distance between two data points
-double Classifier::distance(vector<double>& features, int id2) {
-    // Get the feature vector corresponding to the given id
-    vector<double>& featureVector = data[id2];
 
-    // Calculate the Euclidean distance between the two feature vectors
+//---------------------------------------
+//           PRIVATE HELPERS
+//---------------------------------------
+
+// Calculate the Euclidean distance between two data points
+double Classifier::distance(const vector<double>& features, int row) const {
+    // make sure row is in range
+    if (row < 0 || row >= data.size()) {
+        throw out_of_range("id2 is out of bounds");
+    }
+
+    const vector<double>& datapoint = data[row];
+
+    // make sure feat vec is in range
+    for (int i : featureSubset) {
+        if (i < 1 || i >= datapoint.size()) {
+            throw out_of_range("featureSubset index is out of bounds");
+        }
+    }
+
     double sum = 0.0;
+    // for each feature that we're caluclating based on 
     for (int i = 0; i < featureSubset.size(); i++) {
-        double diff = features[featureSubset[i] - (featureVector.size() - features.size())] - featureVector[featureSubset[i]];
+        int featindex = featureSubset[i]; //current feature we're comparing
+        if (featindex - (datapoint.size() - features.size()) < 0 || featindex - (datapoint.size() - features.size()) >= features.size()) {
+            throw out_of_range("Index adjustment out of bounds");
+        }//if that feat is out of range
+
+        //calculate diff between feature value 
+        double diff = features[featindex - (datapoint.size() - features.size())] - datapoint[featindex];
         sum += diff * diff;
     }
 
-    // Return the square root of the sum
-    double distance = sqrt(sum);
-    return distance;
+    return sqrt(sum);
 }
 
 // Normalize the data
@@ -148,12 +129,51 @@ void Classifier::normalize(int col) {
     }
 }
 
+int Classifier::nn(vector<double>& features){
+    int nnclass = -1; //might need to be float? 
+    double minDist = numeric_limits<double>::max();
+        //for nearest neighbor, go through every data point (row)
+        //see which has closest features (euclid)
+        
+        for (int row = 0; row < data.size(); ++row){
+            //if the next neighbor checked has a smaller dist, make that 
+            //the new nnclass
+            double temp = distance(features, row); 
+            if (temp < minDist){
+                minDist = temp;
+                nnclass = static_cast<int>(data[row][0]);//1st col is class
+            }
+        }
+    return nnclass;
+}
+
 // Normalize the features
 void Classifier::normalizeFeatures(vector<double>& features) {
     for (int i = 0; i < numFeatures; i++) {
         double value = features[i];
         double normalizedValue = (value - normalizingData[i][0]) / (normalizingData[i][1] - normalizingData[i][0]);
         features[i] = normalizedValue;
+    }
+}
+
+// Function to print a 2D vector with the index as the id
+void Classifier::print(){
+    // Print the table header
+    cout << "---------------------------------------------------------------------------------------------" << endl;
+    printf("ID\tClass\t");
+    for (int i = 1; i <= numFeatures; i++) {
+        printf("F_%d\t", i);
+    }
+    printf("\n");
+    cout << "---------------------------------------------------------------------------------------------" << endl;
+
+    // Print the table rows
+    for (int i = 0; i < data.size(); i++) {
+        printf("%d\t", i);
+        for (int j = 0; j < data[i].size(); j++) {
+            printf("%.2f\t", data[i][j]);
+        }
+        cout << endl;
     }
 }
 
