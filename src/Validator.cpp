@@ -31,6 +31,8 @@ int Validator::evaluate(int id, Classifier &classifier) {
 
   // Test the classifier with the given ID
   int predictedClassLabel = classifier.test(id);
+
+
     // cout << predictedClassLabel << endl;
     if (predictedClassLabel == trueClassLabel){
         ClassLabelValue = 1;
