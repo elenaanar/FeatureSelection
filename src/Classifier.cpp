@@ -24,6 +24,9 @@ void Classifier::train(string dataLoc)
     string mystring;
     std::vector<double> featureVector;
     // Get lines from the file, turn to double and then add to the feature vector
+    cout << "Beggining Training\n";
+    std::clock_t start  = std::clock();
+
     while (getline(inputFile, mystring))
     {
         istringstream ss(mystring);
@@ -45,7 +48,9 @@ void Classifier::train(string dataLoc)
     {
         normalize(i);
     }
-
+    std::clock_t end  = std::clock();
+    double timeTaken = (end - start)/(double)CLOCKS_PER_SEC;
+    cout << "Training Finished.Time taken: " << timeTaken << "'s\n";
     // printing the data vector
     // print();
 }

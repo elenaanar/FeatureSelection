@@ -3,7 +3,7 @@
 #include <sstream>
 #include <unordered_map>
 #include <vector>
-
+#include <ctime>
 using namespace std;
 
 #ifndef CLASSIFIER_H

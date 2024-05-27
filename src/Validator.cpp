@@ -2,7 +2,7 @@
 
 // Function to validate the classifier
 double Validator::validate(vector<int> featureSubset, string dataLoc)
-{
+{ cout << "Beginning Validation\n" ;
   // cout << dataLoc << endl;
   Classifier classifier(featureSubset);
   classifier.train(dataLoc);
@@ -11,7 +11,7 @@ double Validator::validate(vector<int> featureSubset, string dataLoc)
 
   // Initialize variables for accuracy calculation
   double correctPredictions = 0;
-
+  std::clock_t start = std::clock();
   // Leave-One-Out
   for (int id = 0; id < DataSize; id++)
   {
@@ -19,7 +19,9 @@ double Validator::validate(vector<int> featureSubset, string dataLoc)
     correctPredictions += evaluate(id, classifier);
     // cout << correctPredictions << endl;
   }
-
+  std::clock_t end = std::clock();
+  double timeTaken = (end - start)/(double)CLOCKS_PER_SEC;
+  cout << "Validation Finished. Time taken: " << timeTaken << "'s\n";
   // Calculate and return the accuracy
   return correctPredictions / DataSize;
 }

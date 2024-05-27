@@ -93,8 +93,35 @@ int main()
     Classifier classifier(featureSubset); // change num features depending on
                                           // the dataset classifier.train("data/small-test-dataset.txt");
                                           // cout << classifier.test(0) << endl;
+    cout << "Testing NN-Algorithm and Validator using feature subset {1,15,27} on dataset 'large-test-dataset.txt'\n";
     Validator validator;
-    cout << validator.validate(featureSubset, "data/large-test-dataset.txt");
+    double accuracy = validator.validate(featureSubset,"large-test-dataset.txt");
+    cout <<"Accuracy of classifier on feature subset {";
+    for(unsigned int i = 0 ; i < featureSubset.size(); ++i){
+        cout << featureSubset.at(i);
+        if(i != featureSubset.size()-1){
+            cout << ",";
+        }else{
+            cout << "} : " << accuracy << endl;
+        }
+    }
+    cout << "Testing NN-Algorithm and Validator using feature subset {3,5,7} on dataset 'small-test-dataset.txt'\n";
+    vector<int> featureSubset2;
+    featureSubset2.push_back(3);
+    featureSubset2.push_back(5);
+    featureSubset2.push_back(7);
+    Classifier classifer2(featureSubset2);
+    Validator validator2;
+    accuracy = validator2.validate(featureSubset2,"small-test-dataset.txt");
+    cout <<"Accuracy of classifier on feature subset {";
+    for(unsigned int i = 0 ; i < featureSubset2.size(); ++i){
+        cout << featureSubset2.at(i);
+        if(i != featureSubset2.size()-1){
+            cout << ",";
+        }else{
+            cout << "} : " << accuracy << endl;
+        }
+    }
     // vector<double> features;
     // //{5.07, 3.14, 1.29, 0.58, 2.73, 1.91, 4.60, 3.36, 4.03, 2.85}
     // // datapoint 0 copied from the dataset
