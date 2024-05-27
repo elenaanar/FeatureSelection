@@ -9,18 +9,20 @@
 #define _SEARCH_H_
 using namespace std;
 
-struct Node{
-    string name;
-    vector<int> subset; 
-    double acc; 
+struct Node
+{
+  string name;
+  vector<int> subset;
+  double acc;
 };
 
-class Search {
-    public: 
-    double evaluate(const unordered_map<int, bool>&);
-    unordered_map<int, bool> greedyForward(int); 
-    unordered_map<int, bool> greedyBackward(int);
-    double bestAccuracy;
+class Search
+{
+public:
+  double evaluate(const unordered_map<int, bool> &);
+  unordered_map<int, bool> greedyForward(int);
+  unordered_map<int, bool> greedyBackward(int);
+  double bestAccuracy;
 };
 
 #endif
