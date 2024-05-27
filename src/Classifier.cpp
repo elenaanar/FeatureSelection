@@ -233,7 +233,7 @@ int Classifier::getNumFeatures() { return numFeatures; }
 // Get the number of data points
 int Classifier::getNumDataPoints() { return data.size(); }
 
-const vector<vector<double>> &Classifier::getData() const
+const vector<vector<double> > &Classifier::getData() const
 {
     return data;
 }

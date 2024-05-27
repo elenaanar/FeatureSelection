@@ -12,10 +12,10 @@ using namespace std;
 class Classifier
 {
 private:
-    vector<vector<double>>
+    vector<vector<double> >
         data; // 2D vector to store data, index is the id and // the first point
               // in     the sub array is the class.
-    vector<vector<double>> normalizingData;
+    vector<vector<double> > normalizingData;
     vector<int> featureSubset;
     // int numDataPoints;
     int numFeatures;
@@ -28,7 +28,7 @@ public:
     void print();
     int getNumFeatures();
     int getNumDataPoints();
-    const vector<vector<double>> &getData() const;
+    const vector<vector<double> > &getData() const;
 
 private:
     void normalize(int col);
