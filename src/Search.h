@@ -4,6 +4,7 @@
 #include <ctime>
 #include <algorithm>
 #include <unordered_map>
+#include "Validator.h"
 
 #ifndef _SEARCH_H_
 #define _SEARCH_H_

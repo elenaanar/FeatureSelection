@@ -24,7 +24,7 @@ void Classifier::train(string dataLoc)
     string mystring;
     std::vector<double> featureVector;
     // Get lines from the file, turn to double and then add to the feature vector
-    cout << "Beggining Training\n";
+    // cout << "Begining Training\n";
     std::clock_t start  = std::clock();
 
     while (getline(inputFile, mystring))
@@ -50,7 +50,7 @@ void Classifier::train(string dataLoc)
     }
     std::clock_t end  = std::clock();
     double timeTaken = (end - start)/(double)CLOCKS_PER_SEC;
-    cout << "Training Finished.Time taken: " << timeTaken << "'s\n";
+    // cout << "Training Finished.Time taken: " << timeTaken << "'s\n";
     // printing the data vector
     // print();
 }
@@ -61,6 +61,9 @@ int Classifier::test(vector<double> &features)
 {
     // Normalize the features
     normalizeFeatures(features);
+    if(featureSubset.empty()){
+        return getMajority();
+    }
 
     // Find the nearest neighbor
 
@@ -81,9 +84,33 @@ int Classifier::test(int id)
 
     // Find the nearest neighbor
     // Remember to skip the id itself
+    if(featureSubset.empty()){
+        return getMajority();
+    }
 
     // Return the class label of the nearest neighbor
     return nn(id);
+}
+
+int Classifier::getMajority(){
+    int class1 = 0;
+    int class2 = 0; 
+    for(int row = 0; row < data.size(); ++row){
+        if(data[row][0] == 1){
+            ++class1;
+        }
+        if(data[row][0] == 2){
+            ++class2;
+        }
+    }
+    if(class1 > class2) {
+        return 1;
+    } else if(class2 > class1) {
+        return 2;
+    } else {
+        srand(time(0));
+        return (rand() % 2) + 1;
+    }
 }
 
 //---------------------------------------
@@ -160,6 +187,9 @@ void Classifier::normalize(int col)
         featureVector[col] = normalizedValue;
     }
 }
+
+//Nearest Neighbor
+//Parameteres: vector of features, OPTIONAL: row to exclude for leave one out
 int Classifier::nn(vector<double> &features, int excludeRow)
 {
     int nnclass = -1;
@@ -180,6 +210,8 @@ int Classifier::nn(vector<double> &features, int excludeRow)
     return nnclass;
 }
 
+//Nearest Neighbor
+//Parameteres: row to exclude in leave one out, calls other nn func
 int Classifier::nn(int row)
 {
     if (row < 0 || row >= data.size())
@@ -238,6 +270,8 @@ int Classifier::getNumFeatures() { return numFeatures; }
 // Get the number of data points
 int Classifier::getNumDataPoints() { return data.size(); }
 
+//No parameteres
+//Returns 2D data vector
 const vector<vector<double> > &Classifier::getData() const
 {
     return data;

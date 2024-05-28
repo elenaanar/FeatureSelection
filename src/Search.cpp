@@ -1,8 +1,14 @@
 #include "Search.h"
 
-double Search::evaluate(const unordered_map<int, bool> &subset)
-{
-  return static_cast<double>(rand()) / RAND_MAX;
+double Search::evaluate(const unordered_map<int, bool>& subset){
+    Validator val; 
+    vector<int> features;
+    for(auto pair: subset){
+        if(pair.first != 0){//keeps vector empty if there are no features
+            features.push_back(pair.first);
+        }
+    }
+    return val.validate(features,"data/small-test-dataset.txt");
 }
 
 void printFeatures(const unordered_map<int, bool> &subset, double accuracy)

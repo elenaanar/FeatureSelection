@@ -29,6 +29,7 @@ public:
     int getNumFeatures();
     int getNumDataPoints();
     const vector<vector<double> > &getData() const;
+    int getMajority();
 
 private:
     void normalize(int col);
