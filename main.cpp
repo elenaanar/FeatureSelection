@@ -74,7 +74,7 @@ int main(int argc, char **argv)
 
         if (subset.size() == 0)
         {
-            cout << "No features selected." << endl;
+            cout << "No features selected.";
         }
         cout << "} with an accuracy of " << search.bestAccuracy * 100 << "%";
         break;
