@@ -1,0 +1,950 @@
+ Welcome to JAKLE's Feature Selection Algorithm
+
+Using a random evalation, with no features, I get an accuracy of 7.82637e-06
+Number of features: 40
+--------------------------
+Greedy Forward Search:
+--------------------------
+Using features {} accuracy is: 81%
+
+Using features {0} accuracy is: 73.8%
+Using features {1} accuracy is: 71%
+Using features {2} accuracy is: 67.3%
+Using features {3} accuracy is: 67.8%
+Using features {4} accuracy is: 69.2%
+Using features {5} accuracy is: 69.5%
+Using features {6} accuracy is: 70.6%
+Using features {7} accuracy is: 71.2%
+Using features {8} accuracy is: 68%
+Using features {9} accuracy is: 69.1%
+Using features {10} accuracy is: 70.5%
+Using features {11} accuracy is: 68%
+Using features {12} accuracy is: 65.8%
+Using features {13} accuracy is: 70.9%
+Using features {14} accuracy is: 69.5%
+Using features {15} accuracy is: 67.5%
+Using features {16} accuracy is: 67.3%
+Using features {17} accuracy is: 70.4%
+Using features {18} accuracy is: 69.6%
+Using features {19} accuracy is: 67.7%
+Using features {20} accuracy is: 68.3%
+Using features {21} accuracy is: 68.5%
+Using features {22} accuracy is: 70.2%
+Using features {23} accuracy is: 67.2%
+Using features {24} accuracy is: 69.3%
+Using features {25} accuracy is: 67.7%
+Using features {26} accuracy is: 84.7%
+Using features {27} accuracy is: 66.4%
+Using features {28} accuracy is: 69.9%
+Using features {29} accuracy is: 70.9%
+Using features {30} accuracy is: 69.9%
+Using features {31} accuracy is: 69.5%
+Using features {32} accuracy is: 70.1%
+Using features {33} accuracy is: 68.2%
+Using features {34} accuracy is: 69.9%
+Using features {35} accuracy is: 69.8%
+Using features {36} accuracy is: 70.5%
+Using features {37} accuracy is: 70.4%
+Using features {38} accuracy is: 71%
+Using features {39} accuracy is: 70.3%
+
+Best subset: Using features {26} accuracy is: 84.7%
+
+Using features {0 26} accuracy is: 95.5%
+Using features {1 26} accuracy is: 84.3%
+Using features {2 26} accuracy is: 82.5%
+Using features {3 26} accuracy is: 82.8%
+Using features {4 26} accuracy is: 81.6%
+Using features {5 26} accuracy is: 84.3%
+Using features {6 26} accuracy is: 82.3%
+Using features {7 26} accuracy is: 84.5%
+Using features {8 26} accuracy is: 84.2%
+Using features {9 26} accuracy is: 82.3%
+Using features {10 26} accuracy is: 82.5%
+Using features {11 26} accuracy is: 82.9%
+Using features {12 26} accuracy is: 82.1%
+Using features {13 26} accuracy is: 83%
+Using features {14 26} accuracy is: 84.7%
+Using features {15 26} accuracy is: 83.4%
+Using features {16 26} accuracy is: 83.7%
+Using features {17 26} accuracy is: 83.2%
+Using features {18 26} accuracy is: 83%
+Using features {19 26} accuracy is: 82.4%
+Using features {20 26} accuracy is: 82.9%
+Using features {21 26} accuracy is: 84%
+Using features {22 26} accuracy is: 84.1%
+Using features {23 26} accuracy is: 81.3%
+Using features {24 26} accuracy is: 81.5%
+Using features {25 26} accuracy is: 83.3%
+Using features {27 26} accuracy is: 82%
+Using features {28 26} accuracy is: 83.2%
+Using features {29 26} accuracy is: 82.2%
+Using features {30 26} accuracy is: 82.1%
+Using features {31 26} accuracy is: 82.4%
+Using features {32 26} accuracy is: 82.2%
+Using features {33 26} accuracy is: 81.8%
+Using features {34 26} accuracy is: 81.2%
+Using features {35 26} accuracy is: 82.2%
+Using features {36 26} accuracy is: 84.7%
+Using features {37 26} accuracy is: 82.5%
+Using features {38 26} accuracy is: 85%
+Using features {39 26} accuracy is: 82.9%
+
+Best subset: Using features {0 26} accuracy is: 95.5%
+
+Using features {1 26 0} accuracy is: 93.9%
+Using features {2 26 0} accuracy is: 93%
+Using features {3 26 0} accuracy is: 93.3%
+Using features {4 26 0} accuracy is: 91.7%
+Using features {26 5 0} accuracy is: 91.8%
+Using features {6 26 0} accuracy is: 92.8%
+Using features {7 26 0} accuracy is: 94%
+Using features {8 26 0} accuracy is: 92.9%
+Using features {9 26 0} accuracy is: 92.1%
+Using features {26 10 0} accuracy is: 91.9%
+Using features {11 26 0} accuracy is: 92.5%
+Using features {12 26 0} accuracy is: 92.3%
+Using features {13 26 0} accuracy is: 93.7%
+Using features {14 26 0} accuracy is: 94.7%
+Using features {26 15 0} accuracy is: 92.8%
+Using features {16 26 0} accuracy is: 91.5%
+Using features {17 26 0} accuracy is: 93.1%
+Using features {18 26 0} accuracy is: 92.7%
+Using features {19 26 0} accuracy is: 93.2%
+Using features {26 20 0} accuracy is: 93%
+Using features {21 26 0} accuracy is: 93.2%
+Using features {22 26 0} accuracy is: 93.3%
+Using features {23 26 0} accuracy is: 92.2%
+Using features {24 26 0} accuracy is: 92.9%
+Using features {26 25 0} accuracy is: 93.1%
+Using features {27 26 0} accuracy is: 92.8%
+Using features {28 26 0} accuracy is: 92.3%
+Using features {29 26 0} accuracy is: 92.8%
+Using features {26 30 0} accuracy is: 92.8%
+Using features {31 26 0} accuracy is: 92.1%
+Using features {32 26 0} accuracy is: 92%
+Using features {33 26 0} accuracy is: 91.8%
+Using features {34 26 0} accuracy is: 91.4%
+Using features {26 35 0} accuracy is: 92.8%
+Using features {36 26 0} accuracy is: 94.6%
+Using features {37 26 0} accuracy is: 93.5%
+Using features {38 26 0} accuracy is: 93.9%
+Using features {39 26 0} accuracy is: 92.9%
+
+Best subset: Using features {14 0 26} accuracy is: 94.7%
+
+Using features {1 26 0 14} accuracy is: 90.9%
+Using features {2 26 0 14} accuracy is: 90.8%
+Using features {3 26 0 14} accuracy is: 89.2%
+Using features {26 0 4 14} accuracy is: 89.5%
+Using features {26 5 0 14} accuracy is: 88.9%
+Using features {6 26 0 14} accuracy is: 89.3%
+Using features {7 26 0 14} accuracy is: 89.9%
+Using features {8 26 0 14} accuracy is: 90%
+Using features {26 0 9 14} accuracy is: 89.8%
+Using features {26 10 0 14} accuracy is: 91.2%
+Using features {11 26 0 14} accuracy is: 90.4%
+Using features {12 26 0 14} accuracy is: 90.5%
+Using features {13 26 0 14} accuracy is: 90.2%
+Using features {26 15 0 14} accuracy is: 90.4%
+Using features {16 26 0 14} accuracy is: 90.2%
+Using features {17 26 0 14} accuracy is: 89.5%
+Using features {18 26 0 14} accuracy is: 92.2%
+Using features {26 0 19 14} accuracy is: 90.6%
+Using features {26 20 0 14} accuracy is: 91.3%
+Using features {21 26 0 14} accuracy is: 89.7%
+Using features {22 26 0 14} accuracy is: 89.3%
+Using features {23 26 0 14} accuracy is: 89.6%
+Using features {26 0 24 14} accuracy is: 90.8%
+Using features {26 25 0 14} accuracy is: 89%
+Using features {27 26 0 14} accuracy is: 91%
+Using features {28 26 0 14} accuracy is: 89.3%
+Using features {26 0 29 14} accuracy is: 90.2%
+Using features {26 30 0 14} accuracy is: 91%
+Using features {31 26 0 14} accuracy is: 89.3%
+Using features {32 26 0 14} accuracy is: 89.7%
+Using features {33 26 0 14} accuracy is: 90%
+Using features {26 0 34 14} accuracy is: 91.1%
+Using features {26 35 0 14} accuracy is: 91.4%
+Using features {36 26 0 14} accuracy is: 90.3%
+Using features {37 26 0 14} accuracy is: 90.9%
+Using features {38 26 0 14} accuracy is: 91%
+Using features {26 0 39 14} accuracy is: 90.7%
+
+Best subset: Using features {18 14 0 26} accuracy is: 92.2%
+
+Using features {1 26 0 14 18} accuracy is: 86.6%
+Using features {2 26 0 14 18} accuracy is: 86.5%
+Using features {26 0 14 3 18} accuracy is: 86.6%
+Using features {26 0 4 14 18} accuracy is: 84.4%
+Using features {26 5 0 14 18} accuracy is: 87.4%
+Using features {6 26 0 14 18} accuracy is: 85.1%
+Using features {7 26 0 14 18} accuracy is: 86.9%
+Using features {26 0 14 8 18} accuracy is: 86.9%
+Using features {26 0 9 14 18} accuracy is: 84.9%
+Using features {26 10 0 14 18} accuracy is: 85.8%
+Using features {11 26 0 14 18} accuracy is: 86.3%
+Using features {12 26 0 14 18} accuracy is: 84.9%
+Using features {26 0 14 13 18} accuracy is: 84.5%
+Using features {26 15 0 14 18} accuracy is: 86.1%
+Using features {16 26 0 14 18} accuracy is: 85.4%
+Using features {17 26 0 14 18} accuracy is: 86%
+Using features {26 0 19 14 18} accuracy is: 86.1%
+Using features {26 20 0 14 18} accuracy is: 85.6%
+Using features {21 26 0 14 18} accuracy is: 86.2%
+Using features {22 26 0 14 18} accuracy is: 85.9%
+Using features {26 0 14 23 18} accuracy is: 85.4%
+Using features {26 0 24 14 18} accuracy is: 86.4%
+Using features {26 25 0 14 18} accuracy is: 85.3%
+Using features {27 26 0 14 18} accuracy is: 85.5%
+Using features {26 0 14 28 18} accuracy is: 83.8%
+Using features {26 0 29 14 18} accuracy is: 87.1%
+Using features {26 30 0 14 18} accuracy is: 86.9%
+Using features {31 26 0 14 18} accuracy is: 84.1%
+Using features {32 26 0 14 18} accuracy is: 86.6%
+Using features {26 0 14 33 18} accuracy is: 85.7%
+Using features {26 0 34 14 18} accuracy is: 83.3%
+Using features {26 35 0 14 18} accuracy is: 86.2%
+Using features {36 26 0 14 18} accuracy is: 88%
+Using features {37 26 0 14 18} accuracy is: 88%
+Using features {26 0 14 38 18} accuracy is: 84.2%
+Using features {26 0 39 14 18} accuracy is: 87.1%
+
+Best subset: Using features {18 14 0 36 26} accuracy is: 88%
+
+Using features {1 26 14 36 0 18} accuracy is: 83.5%
+Using features {2 26 14 36 0 18} accuracy is: 82.8%
+Using features {26 3 14 36 0 18} accuracy is: 84.6%
+Using features {4 26 14 36 0 18} accuracy is: 80.6%
+Using features {5 26 14 36 0 18} accuracy is: 81.7%
+Using features {6 26 14 36 0 18} accuracy is: 82.9%
+Using features {26 14 36 0 7 18} accuracy is: 83.6%
+Using features {8 26 14 36 0 18} accuracy is: 82.9%
+Using features {9 26 14 36 0 18} accuracy is: 82.1%
+Using features {10 26 14 36 0 18} accuracy is: 80.8%
+Using features {26 14 36 11 0 18} accuracy is: 82.5%
+Using features {12 26 14 36 0 18} accuracy is: 83.5%
+Using features {13 26 14 36 0 18} accuracy is: 82.5%
+Using features {15 26 14 36 0 18} accuracy is: 83.5%
+Using features {16 26 14 36 0 18} accuracy is: 82.6%
+Using features {17 26 14 36 0 18} accuracy is: 84.3%
+Using features {19 26 14 36 0 18} accuracy is: 84.2%
+Using features {20 26 14 36 0 18} accuracy is: 84.6%
+Using features {21 26 14 36 0 18} accuracy is: 83.3%
+Using features {26 14 36 22 0 18} accuracy is: 80.4%
+Using features {23 26 14 36 0 18} accuracy is: 80.7%
+Using features {24 26 14 36 0 18} accuracy is: 83.7%
+Using features {26 25 14 36 0 18} accuracy is: 82.8%
+Using features {27 26 14 36 0 18} accuracy is: 84.8%
+Using features {28 26 14 36 0 18} accuracy is: 82.7%
+Using features {26 14 36 0 29 18} accuracy is: 82.2%
+Using features {30 26 14 36 0 18} accuracy is: 83.7%
+Using features {31 26 14 36 0 18} accuracy is: 82.7%
+Using features {32 26 14 36 0 18} accuracy is: 83.5%
+Using features {26 14 36 33 0 18} accuracy is: 82.3%
+Using features {34 26 14 36 0 18} accuracy is: 81.4%
+Using features {35 26 14 36 0 18} accuracy is: 83%
+Using features {37 26 14 36 0 18} accuracy is: 81.1%
+Using features {38 26 14 36 0 18} accuracy is: 83.9%
+Using features {39 26 14 36 0 18} accuracy is: 85.6%
+
+Best subset: Using features {39 18 36 14 0 26} accuracy is: 85.6%
+
+Using features {1 26 0 14 36 18 39} accuracy is: 82.6%
+Using features {2 26 0 14 36 18 39} accuracy is: 81.8%
+Using features {26 0 3 14 36 18 39} accuracy is: 82%
+Using features {4 26 0 14 36 18 39} accuracy is: 79.5%
+Using features {5 26 0 14 36 18 39} accuracy is: 80.4%
+Using features {26 0 14 36 18 6 39} accuracy is: 78.3%
+Using features {26 0 14 36 7 18 39} accuracy is: 81.9%
+Using features {8 26 0 14 36 18 39} accuracy is: 81.1%
+Using features {9 26 0 14 36 18 39} accuracy is: 83.2%
+Using features {10 26 0 14 36 18 39} accuracy is: 81.2%
+Using features {26 11 0 14 36 18 39} accuracy is: 82.5%
+Using features {12 26 0 14 36 18 39} accuracy is: 81.1%
+Using features {13 26 0 14 36 18 39} accuracy is: 77.8%
+Using features {15 26 0 14 36 18 39} accuracy is: 82%
+Using features {16 26 0 14 36 18 39} accuracy is: 80.8%
+Using features {26 0 14 36 18 17 39} accuracy is: 83.3%
+Using features {19 26 0 14 36 18 39} accuracy is: 81.8%
+Using features {20 26 0 14 36 18 39} accuracy is: 82%
+Using features {21 26 0 14 36 18 39} accuracy is: 82.1%
+Using features {26 22 0 14 36 18 39} accuracy is: 80.4%
+Using features {23 26 0 14 36 18 39} accuracy is: 80.2%
+Using features {24 26 0 14 36 18 39} accuracy is: 81.3%
+Using features {26 0 25 14 36 18 39} accuracy is: 80.5%
+Using features {27 26 0 14 36 18 39} accuracy is: 83.8%
+Using features {26 0 14 36 18 28 39} accuracy is: 82.2%
+Using features {26 0 14 36 29 18 39} accuracy is: 81.1%
+Using features {30 26 0 14 36 18 39} accuracy is: 82.2%
+Using features {31 26 0 14 36 18 39} accuracy is: 81.4%
+Using features {32 26 0 14 36 18 39} accuracy is: 82.6%
+Using features {26 33 0 14 36 18 39} accuracy is: 82%
+Using features {34 26 0 14 36 18 39} accuracy is: 79.8%
+Using features {35 26 0 14 36 18 39} accuracy is: 82.2%
+Using features {37 26 0 14 36 18 39} accuracy is: 79.5%
+Using features {38 26 0 14 36 18 39} accuracy is: 82.3%
+
+Best subset: Using features {27 39 18 36 14 0 26} accuracy is: 83.8%
+
+Using features {1 26 0 14 36 18 39 27} accuracy is: 79.9%
+Using features {2 26 0 14 36 18 39 27} accuracy is: 78.4%
+Using features {26 0 3 14 36 18 39 27} accuracy is: 80.6%
+Using features {4 26 0 14 36 18 39 27} accuracy is: 78.1%
+Using features {26 0 14 36 18 39 5 27} accuracy is: 81.3%
+Using features {26 0 14 36 18 6 39 27} accuracy is: 78.5%
+Using features {26 0 14 36 7 18 39 27} accuracy is: 81.2%
+Using features {8 26 0 14 36 18 39 27} accuracy is: 79.8%
+Using features {9 26 0 14 36 18 39 27} accuracy is: 79.9%
+Using features {10 26 0 14 36 18 39 27} accuracy is: 79.3%
+Using features {26 11 0 14 36 18 39 27} accuracy is: 77.6%
+Using features {12 26 0 14 36 18 39 27} accuracy is: 80.3%
+Using features {13 26 0 14 36 18 39 27} accuracy is: 80.8%
+Using features {15 26 0 14 36 18 39 27} accuracy is: 78.8%
+Using features {26 0 14 36 18 39 16 27} accuracy is: 79.1%
+Using features {26 0 14 36 18 17 39 27} accuracy is: 79.5%
+Using features {19 26 0 14 36 18 39 27} accuracy is: 79.3%
+Using features {20 26 0 14 36 18 39 27} accuracy is: 79%
+Using features {21 26 0 14 36 18 39 27} accuracy is: 79.4%
+Using features {26 22 0 14 36 18 39 27} accuracy is: 78.3%
+Using features {23 26 0 14 36 18 39 27} accuracy is: 81.7%
+Using features {24 26 0 14 36 18 39 27} accuracy is: 79.6%
+Using features {26 0 25 14 36 18 39 27} accuracy is: 78.5%
+Using features {26 0 14 36 18 28 39 27} accuracy is: 79.3%
+Using features {26 0 14 36 29 18 39 27} accuracy is: 80.6%
+Using features {30 26 0 14 36 18 39 27} accuracy is: 80.2%
+Using features {31 26 0 14 36 18 39 27} accuracy is: 79.7%
+Using features {32 26 0 14 36 18 39 27} accuracy is: 80.9%
+Using features {26 33 0 14 36 18 39 27} accuracy is: 79.5%
+Using features {34 26 0 14 36 18 39 27} accuracy is: 79.1%
+Using features {35 26 0 14 36 18 39 27} accuracy is: 78.8%
+Using features {37 26 0 14 36 18 39 27} accuracy is: 78.9%
+Using features {26 0 14 36 18 39 38 27} accuracy is: 79.4%
+
+Best subset: Using features {23 27 39 18 36 14 0 26} accuracy is: 81.7%
+
+Using features {26 0 14 36 18 39 27 1 23} accuracy is: 79%
+Using features {2 26 0 14 36 18 39 27 23} accuracy is: 77.9%
+Using features {26 0 3 14 36 18 39 27 23} accuracy is: 78.3%
+Using features {4 26 0 14 36 18 39 27 23} accuracy is: 77.3%
+Using features {26 0 14 36 18 39 5 27 23} accuracy is: 77.7%
+Using features {26 0 14 36 18 6 39 27 23} accuracy is: 77.7%
+Using features {26 0 14 36 7 18 39 27 23} accuracy is: 79.1%
+Using features {8 26 0 14 36 18 39 27 23} accuracy is: 77.7%
+Using features {9 26 0 14 36 18 39 27 23} accuracy is: 78.4%
+Using features {10 26 0 14 36 18 39 27 23} accuracy is: 78.2%
+Using features {26 11 0 14 36 18 39 27 23} accuracy is: 76.7%
+Using features {26 0 14 36 18 39 27 12 23} accuracy is: 81.1%
+Using features {13 26 0 14 36 18 39 27 23} accuracy is: 78.8%
+Using features {15 26 0 14 36 18 39 27 23} accuracy is: 76.6%
+Using features {26 0 14 36 18 39 16 27 23} accuracy is: 77.5%
+Using features {26 0 14 36 18 17 39 27 23} accuracy is: 78.5%
+Using features {19 26 0 14 36 18 39 27 23} accuracy is: 76.5%
+Using features {20 26 0 14 36 18 39 27 23} accuracy is: 76%
+Using features {21 26 0 14 36 18 39 27 23} accuracy is: 79%
+Using features {26 22 0 14 36 18 39 27 23} accuracy is: 77.6%
+Using features {24 26 0 14 36 18 39 27 23} accuracy is: 77%
+Using features {26 0 25 14 36 18 39 27 23} accuracy is: 78.8%
+Using features {26 0 14 36 18 28 39 27 23} accuracy is: 76.9%
+Using features {26 0 14 36 29 18 39 27 23} accuracy is: 76.8%
+Using features {30 26 0 14 36 18 39 27 23} accuracy is: 77.8%
+Using features {31 26 0 14 36 18 39 27 23} accuracy is: 77.2%
+Using features {32 26 0 14 36 18 39 27 23} accuracy is: 78.5%
+Using features {26 33 0 14 36 18 39 27 23} accuracy is: 77.3%
+Using features {26 0 14 36 18 39 27 34 23} accuracy is: 78.1%
+Using features {35 26 0 14 36 18 39 27 23} accuracy is: 75.8%
+Using features {37 26 0 14 36 18 39 27 23} accuracy is: 77.5%
+Using features {26 0 14 36 18 39 38 27 23} accuracy is: 77.7%
+
+Best subset: Using features {12 23 27 39 18 36 14 0 26} accuracy is: 81.1%
+
+Using features {26 0 14 36 18 39 27 1 23 12} accuracy is: 77.4%
+Using features {2 26 0 14 36 18 39 27 23 12} accuracy is: 77.3%
+Using features {26 0 3 14 36 18 39 27 23 12} accuracy is: 76.9%
+Using features {4 26 0 14 36 18 39 27 23 12} accuracy is: 75.3%
+Using features {26 0 14 36 18 39 5 27 23 12} accuracy is: 76.5%
+Using features {26 0 14 36 18 6 39 27 23 12} accuracy is: 75.8%
+Using features {26 0 14 36 7 18 39 27 23 12} accuracy is: 76.8%
+Using features {8 26 0 14 36 18 39 27 23 12} accuracy is: 75.7%
+Using features {9 26 0 14 36 18 39 27 23 12} accuracy is: 77.2%
+Using features {10 26 0 14 36 18 39 27 23 12} accuracy is: 75%
+Using features {26 11 0 14 36 18 39 27 23 12} accuracy is: 77.3%
+Using features {13 26 0 14 36 18 39 27 23 12} accuracy is: 77.5%
+Using features {15 26 0 14 36 18 39 27 23 12} accuracy is: 74.2%
+Using features {26 0 14 36 18 39 16 27 23 12} accuracy is: 76.9%
+Using features {26 0 14 36 18 17 39 27 23 12} accuracy is: 77%
+Using features {19 26 0 14 36 18 39 27 23 12} accuracy is: 78.1%
+Using features {20 26 0 14 36 18 39 27 23 12} accuracy is: 76%
+Using features {21 26 0 14 36 18 39 27 23 12} accuracy is: 75.8%
+Using features {26 22 0 14 36 18 39 27 23 12} accuracy is: 75.8%
+Using features {24 26 0 14 36 18 39 27 23 12} accuracy is: 76.5%
+Using features {26 0 25 14 36 18 39 27 23 12} accuracy is: 76%
+Using features {26 0 14 36 18 28 39 27 23 12} accuracy is: 74.8%
+Using features {26 0 14 36 29 18 39 27 23 12} accuracy is: 77.9%
+Using features {30 26 0 14 36 18 39 27 23 12} accuracy is: 76.6%
+Using features {31 26 0 14 36 18 39 27 23 12} accuracy is: 76.2%
+Using features {32 26 0 14 36 18 39 27 23 12} accuracy is: 78.2%
+Using features {26 33 0 14 36 18 39 27 23 12} accuracy is: 76.8%
+Using features {26 0 14 36 18 39 27 34 23 12} accuracy is: 76.3%
+Using features {35 26 0 14 36 18 39 27 23 12} accuracy is: 74.7%
+Using features {37 26 0 14 36 18 39 27 23 12} accuracy is: 75.9%
+Using features {26 0 14 36 18 39 38 27 23 12} accuracy is: 77.8%
+
+Best subset: Using features {32 12 23 27 39 18 36 14 0 26} accuracy is: 78.2%
+
+Using features {26 0 14 36 18 39 27 1 23 12 32} accuracy is: 75.1%
+Using features {2 26 0 14 36 18 39 27 23 12 32} accuracy is: 75.7%
+Using features {26 0 3 14 36 18 39 27 23 12 32} accuracy is: 75.3%
+Using features {4 26 0 14 36 18 39 27 23 12 32} accuracy is: 73.9%
+Using features {26 0 14 36 18 39 5 27 23 12 32} accuracy is: 76.3%
+Using features {26 0 14 36 18 6 39 27 23 12 32} accuracy is: 74.1%
+Using features {26 0 14 36 7 18 39 27 23 12 32} accuracy is: 75.3%
+Using features {8 26 0 14 36 18 39 27 23 12 32} accuracy is: 74.3%
+Using features {9 26 0 14 36 18 39 27 23 12 32} accuracy is: 76.6%
+Using features {26 0 14 36 18 39 27 23 12 10 32} accuracy is: 72.8%
+Using features {26 11 0 14 36 18 39 27 23 12 32} accuracy is: 77%
+Using features {13 26 0 14 36 18 39 27 23 12 32} accuracy is: 76.7%
+Using features {15 26 0 14 36 18 39 27 23 12 32} accuracy is: 73.5%
+Using features {26 0 14 36 18 39 16 27 23 12 32} accuracy is: 75.6%
+Using features {26 0 14 36 18 17 39 27 23 12 32} accuracy is: 75.1%
+Using features {19 26 0 14 36 18 39 27 23 12 32} accuracy is: 74.6%
+Using features {20 26 0 14 36 18 39 27 23 12 32} accuracy is: 75.6%
+Using features {26 0 14 36 18 39 27 23 12 21 32} accuracy is: 76.2%
+Using features {26 22 0 14 36 18 39 27 23 12 32} accuracy is: 74.1%
+Using features {24 26 0 14 36 18 39 27 23 12 32} accuracy is: 74.4%
+Using features {26 0 25 14 36 18 39 27 23 12 32} accuracy is: 75.5%
+Using features {26 0 14 36 18 28 39 27 23 12 32} accuracy is: 74.6%
+Using features {26 0 14 36 29 18 39 27 23 12 32} accuracy is: 75.1%
+Using features {30 26 0 14 36 18 39 27 23 12 32} accuracy is: 74.5%
+Using features {31 26 0 14 36 18 39 27 23 12 32} accuracy is: 74.5%
+Using features {26 33 0 14 36 18 39 27 23 12 32} accuracy is: 75.8%
+Using features {26 0 14 36 18 39 27 34 23 12 32} accuracy is: 74.4%
+Using features {35 26 0 14 36 18 39 27 23 12 32} accuracy is: 73.6%
+Using features {37 26 0 14 36 18 39 27 23 12 32} accuracy is: 73.3%
+Using features {26 0 14 36 18 39 38 27 23 12 32} accuracy is: 76.8%
+
+Best subset: Using features {32 12 23 27 39 18 36 14 11 0 26} accuracy is: 77%
+
+Using features {1 26 23 0 11 14 36 18 39 27 12 32} accuracy is: 74.1%
+Using features {2 26 23 0 11 14 36 18 39 27 12 32} accuracy is: 75.2%
+Using features {3 26 23 0 11 14 36 18 39 27 12 32} accuracy is: 73.8%
+Using features {26 23 0 11 14 36 18 39 4 27 12 32} accuracy is: 75.2%
+Using features {5 26 23 0 11 14 36 18 39 27 12 32} accuracy is: 77.2%
+Using features {6 26 23 0 11 14 36 18 39 27 12 32} accuracy is: 73.1%
+Using features {7 26 23 0 11 14 36 18 39 27 12 32} accuracy is: 75.2%
+Using features {8 26 23 0 11 14 36 18 39 27 12 32} accuracy is: 73.8%
+Using features {26 23 0 11 14 36 18 39 27 12 9 32} accuracy is: 74.3%
+Using features {10 26 23 0 11 14 36 18 39 27 12 32} accuracy is: 75.3%
+Using features {26 23 0 11 14 13 36 18 39 27 12 32} accuracy is: 73.8%
+Using features {15 26 23 0 11 14 36 18 39 27 12 32} accuracy is: 73.2%
+Using features {26 23 0 11 14 36 18 16 39 27 12 32} accuracy is: 75.4%
+Using features {17 26 23 0 11 14 36 18 39 27 12 32} accuracy is: 73.8%
+Using features {19 26 23 0 11 14 36 18 39 27 12 32} accuracy is: 73.7%
+Using features {20 26 23 0 11 14 36 18 39 27 12 32} accuracy is: 73.7%
+Using features {21 26 23 0 11 14 36 18 39 27 12 32} accuracy is: 74.7%
+Using features {22 26 23 0 11 14 36 18 39 27 12 32} accuracy is: 73.1%
+Using features {24 26 23 0 11 14 36 18 39 27 12 32} accuracy is: 74.7%
+Using features {25 26 23 0 11 14 36 18 39 27 12 32} accuracy is: 73.5%
+Using features {28 26 23 0 11 14 36 18 39 27 12 32} accuracy is: 74.2%
+Using features {29 26 23 0 11 14 36 18 39 27 12 32} accuracy is: 75.3%
+Using features {30 26 23 0 11 14 36 18 39 27 12 32} accuracy is: 74.2%
+Using features {31 26 23 0 11 14 36 18 39 27 12 32} accuracy is: 73.2%
+Using features {33 26 23 0 11 14 36 18 39 27 12 32} accuracy is: 73.9%
+Using features {26 23 0 34 11 14 36 18 39 27 12 32} accuracy is: 73.2%
+Using features {26 23 0 11 14 36 18 39 27 35 12 32} accuracy is: 74%
+Using features {26 23 0 11 37 14 36 18 39 27 12 32} accuracy is: 73%
+Using features {38 26 23 0 11 14 36 18 39 27 12 32} accuracy is: 73.2%
+
+Best subset: Using features {5 32 12 0 23 27 39 18 36 14 11 26} accuracy is: 77.2%
+
+Using features {1 26 11 14 36 18 39 27 23 0 12 32 5} accuracy is: 74.9%
+Using features {2 26 11 14 36 18 39 27 23 0 12 32 5} accuracy is: 75.2%
+Using features {3 26 11 14 36 18 39 27 23 0 12 32 5} accuracy is: 74%
+Using features {26 11 14 36 18 39 4 27 23 0 12 32 5} accuracy is: 74.8%
+Using features {6 26 11 14 36 18 39 27 23 0 12 32 5} accuracy is: 72.4%
+Using features {7 26 11 14 36 18 39 27 23 0 12 32 5} accuracy is: 72.9%
+Using features {8 26 11 14 36 18 39 27 23 0 12 32 5} accuracy is: 73.4%
+Using features {26 11 14 36 18 39 27 23 0 12 9 32 5} accuracy is: 75.3%
+Using features {10 26 11 14 36 18 39 27 23 0 12 32 5} accuracy is: 74.1%
+Using features {26 11 14 13 36 18 39 27 23 0 12 32 5} accuracy is: 74.4%
+Using features {15 26 11 14 36 18 39 27 23 0 12 32 5} accuracy is: 73.9%
+Using features {26 11 14 36 18 16 39 27 23 0 12 32 5} accuracy is: 76.2%
+Using features {17 26 11 14 36 18 39 27 23 0 12 32 5} accuracy is: 75.2%
+Using features {19 26 11 14 36 18 39 27 23 0 12 32 5} accuracy is: 73.3%
+Using features {20 26 11 14 36 18 39 27 23 0 12 32 5} accuracy is: 75.2%
+Using features {21 26 11 14 36 18 39 27 23 0 12 32 5} accuracy is: 74.7%
+Using features {22 26 11 14 36 18 39 27 23 0 12 32 5} accuracy is: 72.4%
+Using features {24 26 11 14 36 18 39 27 23 0 12 32 5} accuracy is: 75.5%
+Using features {25 26 11 14 36 18 39 27 23 0 12 32 5} accuracy is: 74.2%
+Using features {26 11 14 36 18 39 27 23 0 12 32 28 5} accuracy is: 75.4%
+Using features {29 26 11 14 36 18 39 27 23 0 12 32 5} accuracy is: 75.3%
+Using features {30 26 11 14 36 18 39 27 23 0 12 32 5} accuracy is: 76%
+Using features {31 26 11 14 36 18 39 27 23 0 12 32 5} accuracy is: 74.9%
+Using features {33 26 11 14 36 18 39 27 23 0 12 32 5} accuracy is: 74.1%
+Using features {26 34 11 14 36 18 39 27 23 0 12 32 5} accuracy is: 73.7%
+Using features {26 11 14 36 18 39 27 23 0 35 12 32 5} accuracy is: 74.5%
+Using features {26 11 37 14 36 18 39 27 23 0 12 32 5} accuracy is: 73.7%
+Using features {38 26 11 14 36 18 39 27 23 0 12 32 5} accuracy is: 74.8%
+
+Best subset: Using features {5 32 12 0 23 27 16 39 18 36 14 11 26} accuracy is: 76.2%
+
+Using features {1 26 11 14 36 18 39 16 27 23 0 12 32 5} accuracy is: 74.3%
+Using features {2 26 11 14 36 18 39 16 27 23 0 12 32 5} accuracy is: 74.1%
+Using features {3 26 11 14 36 18 39 16 27 23 0 12 32 5} accuracy is: 73.7%
+Using features {26 11 14 36 18 39 16 4 27 23 0 12 32 5} accuracy is: 71.5%
+Using features {6 26 11 14 36 18 39 16 27 23 0 12 32 5} accuracy is: 72.5%
+Using features {7 26 11 14 36 18 39 16 27 23 0 12 32 5} accuracy is: 74.7%
+Using features {8 26 11 14 36 18 39 16 27 23 0 12 32 5} accuracy is: 73%
+Using features {26 11 14 36 18 39 16 27 23 0 12 9 32 5} accuracy is: 75.1%
+Using features {10 26 11 14 36 18 39 16 27 23 0 12 32 5} accuracy is: 74.6%
+Using features {26 11 14 13 36 18 39 16 27 23 0 12 32 5} accuracy is: 73%
+Using features {15 26 11 14 36 18 39 16 27 23 0 12 32 5} accuracy is: 72.9%
+Using features {17 26 11 14 36 18 39 16 27 23 0 12 32 5} accuracy is: 72.1%
+Using features {19 26 11 14 36 18 39 16 27 23 0 12 32 5} accuracy is: 72.4%
+Using features {20 26 11 14 36 18 39 16 27 23 0 12 32 5} accuracy is: 73%
+Using features {21 26 11 14 36 18 39 16 27 23 0 12 32 5} accuracy is: 73.5%
+Using features {22 26 11 14 36 18 39 16 27 23 0 12 32 5} accuracy is: 73%
+Using features {24 26 11 14 36 18 39 16 27 23 0 12 32 5} accuracy is: 74%
+Using features {25 26 11 14 36 18 39 16 27 23 0 12 32 5} accuracy is: 73.5%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 28 5} accuracy is: 75.7%
+Using features {29 26 11 14 36 18 39 16 27 23 0 12 32 5} accuracy is: 73.3%
+Using features {30 26 11 14 36 18 39 16 27 23 0 12 32 5} accuracy is: 74.9%
+Using features {31 26 11 14 36 18 39 16 27 23 0 12 32 5} accuracy is: 73.9%
+Using features {33 26 11 14 36 18 39 16 27 23 0 12 32 5} accuracy is: 72.8%
+Using features {26 34 11 14 36 18 39 16 27 23 0 12 32 5} accuracy is: 71.9%
+Using features {26 11 14 36 18 39 16 27 23 0 35 12 32 5} accuracy is: 74.3%
+Using features {26 11 37 14 36 18 39 16 27 23 0 12 32 5} accuracy is: 72%
+Using features {38 26 11 14 36 18 39 16 27 23 0 12 32 5} accuracy is: 72.5%
+
+Best subset: Using features {28 5 32 12 0 23 27 16 39 18 36 14 11 26} accuracy is: 75.7%
+
+Using features {1 26 11 14 36 18 39 16 27 23 0 12 32 5 28} accuracy is: 73.2%
+Using features {2 26 11 14 36 18 39 16 27 23 0 12 32 5 28} accuracy is: 74%
+Using features {3 26 11 14 36 18 39 16 27 23 0 12 32 5 28} accuracy is: 72.5%
+Using features {26 11 14 36 18 39 16 4 27 23 0 12 32 5 28} accuracy is: 71.5%
+Using features {6 26 11 14 36 18 39 16 27 23 0 12 32 5 28} accuracy is: 72.5%
+Using features {7 26 11 14 36 18 39 16 27 23 0 12 32 5 28} accuracy is: 73.6%
+Using features {8 26 11 14 36 18 39 16 27 23 0 12 32 5 28} accuracy is: 72.6%
+Using features {26 11 14 36 18 39 16 27 23 0 12 9 32 5 28} accuracy is: 73.8%
+Using features {10 26 11 14 36 18 39 16 27 23 0 12 32 5 28} accuracy is: 74.2%
+Using features {26 11 14 13 36 18 39 16 27 23 0 12 32 5 28} accuracy is: 72.7%
+Using features {15 26 11 14 36 18 39 16 27 23 0 12 32 5 28} accuracy is: 72.7%
+Using features {17 26 11 14 36 18 39 16 27 23 0 12 32 5 28} accuracy is: 73.7%
+Using features {19 26 11 14 36 18 39 16 27 23 0 12 32 5 28} accuracy is: 72.9%
+Using features {20 26 11 14 36 18 39 16 27 23 0 12 32 5 28} accuracy is: 73%
+Using features {21 26 11 14 36 18 39 16 27 23 0 12 32 5 28} accuracy is: 72%
+Using features {22 26 11 14 36 18 39 16 27 23 0 12 32 5 28} accuracy is: 72.3%
+Using features {24 26 11 14 36 18 39 16 27 23 0 12 32 5 28} accuracy is: 74.2%
+Using features {25 26 11 14 36 18 39 16 27 23 0 12 32 5 28} accuracy is: 73.8%
+Using features {29 26 11 14 36 18 39 16 27 23 0 12 32 5 28} accuracy is: 74.3%
+Using features {30 26 11 14 36 18 39 16 27 23 0 12 32 5 28} accuracy is: 73.8%
+Using features {31 26 11 14 36 18 39 16 27 23 0 12 32 5 28} accuracy is: 71.4%
+Using features {33 26 11 14 36 18 39 16 27 23 0 12 32 5 28} accuracy is: 75.2%
+Using features {26 34 11 14 36 18 39 16 27 23 0 12 32 5 28} accuracy is: 72%
+Using features {26 11 14 36 18 39 16 27 23 0 35 12 32 5 28} accuracy is: 72.4%
+Using features {26 11 37 14 36 18 39 16 27 23 0 12 32 5 28} accuracy is: 71.9%
+Using features {38 26 11 14 36 18 39 16 27 23 0 12 32 5 28} accuracy is: 73.6%
+
+Best subset: Using features {33 28 5 32 12 0 23 27 16 39 18 36 14 11 26} accuracy is: 75.2%
+
+Using features {1 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33} accuracy is: 73.9%
+Using features {2 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33} accuracy is: 72.7%
+Using features {3 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33} accuracy is: 72.8%
+Using features {26 11 14 36 18 39 16 4 27 23 0 12 32 5 28 33} accuracy is: 71.2%
+Using features {6 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33} accuracy is: 72.6%
+Using features {7 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33} accuracy is: 72.4%
+Using features {8 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33} accuracy is: 72.2%
+Using features {26 11 14 36 18 39 16 27 23 0 12 9 32 5 28 33} accuracy is: 73.3%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 10 33} accuracy is: 73.1%
+Using features {26 11 14 13 36 18 39 16 27 23 0 12 32 5 28 33} accuracy is: 72%
+Using features {15 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33} accuracy is: 75.3%
+Using features {17 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33} accuracy is: 73%
+Using features {19 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33} accuracy is: 71.8%
+Using features {20 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33} accuracy is: 72.9%
+Using features {21 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33} accuracy is: 71.8%
+Using features {22 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33} accuracy is: 72.4%
+Using features {24 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33} accuracy is: 71.9%
+Using features {25 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33} accuracy is: 74.1%
+Using features {29 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33} accuracy is: 73.4%
+Using features {30 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33} accuracy is: 72.7%
+Using features {31 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33} accuracy is: 73.1%
+Using features {26 34 11 14 36 18 39 16 27 23 0 12 32 5 28 33} accuracy is: 71.5%
+Using features {26 11 14 36 18 39 16 27 23 0 35 12 32 5 28 33} accuracy is: 73.9%
+Using features {26 11 37 14 36 18 39 16 27 23 0 12 32 5 28 33} accuracy is: 72.1%
+Using features {38 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33} accuracy is: 72.8%
+
+Best subset: Using features {15 33 28 5 32 12 0 23 27 16 39 18 36 14 11 26} accuracy is: 75.3%
+
+Using features {1 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15} accuracy is: 72.9%
+Using features {2 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15} accuracy is: 72.9%
+Using features {3 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15} accuracy is: 73.2%
+Using features {26 11 14 36 18 39 16 4 27 23 0 12 32 5 28 33 15} accuracy is: 71.3%
+Using features {6 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15} accuracy is: 71%
+Using features {7 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15} accuracy is: 73.9%
+Using features {8 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15} accuracy is: 71.8%
+Using features {26 11 14 36 18 39 16 27 23 0 12 9 32 5 28 33 15} accuracy is: 72%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 10 33 15} accuracy is: 72.9%
+Using features {26 11 14 13 36 18 39 16 27 23 0 12 32 5 28 33 15} accuracy is: 71.7%
+Using features {17 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15} accuracy is: 70.9%
+Using features {19 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15} accuracy is: 71.8%
+Using features {20 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15} accuracy is: 73%
+Using features {21 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15} accuracy is: 69.2%
+Using features {22 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15} accuracy is: 70.3%
+Using features {24 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15} accuracy is: 72.5%
+Using features {25 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15} accuracy is: 73.1%
+Using features {29 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15} accuracy is: 72.7%
+Using features {30 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15} accuracy is: 72.3%
+Using features {31 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15} accuracy is: 72.1%
+Using features {26 34 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15} accuracy is: 71.5%
+Using features {26 11 14 36 18 39 16 27 23 0 35 12 32 5 28 33 15} accuracy is: 72.4%
+Using features {26 11 37 14 36 18 39 16 27 23 0 12 32 5 28 33 15} accuracy is: 73.2%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 38 15} accuracy is: 71.3%
+
+Best subset: Using features {7 15 33 28 5 32 12 0 23 27 16 39 18 36 14 11 26} accuracy is: 73.9%
+
+Using features {1 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7} accuracy is: 73.4%
+Using features {2 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7} accuracy is: 73%
+Using features {3 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7} accuracy is: 73.2%
+Using features {26 11 14 36 18 39 16 4 27 23 0 12 32 5 28 33 15 7} accuracy is: 71.5%
+Using features {6 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7} accuracy is: 70.8%
+Using features {8 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7} accuracy is: 71.5%
+Using features {26 11 14 36 18 39 16 27 23 0 12 9 32 5 28 33 15 7} accuracy is: 72.3%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 10 33 15 7} accuracy is: 71.9%
+Using features {26 11 14 13 36 18 39 16 27 23 0 12 32 5 28 33 15 7} accuracy is: 71.1%
+Using features {17 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7} accuracy is: 70%
+Using features {19 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7} accuracy is: 70.8%
+Using features {20 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7} accuracy is: 73.2%
+Using features {21 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7} accuracy is: 70.8%
+Using features {22 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7} accuracy is: 70.8%
+Using features {24 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7} accuracy is: 72.4%
+Using features {25 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7} accuracy is: 71.8%
+Using features {29 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7} accuracy is: 72.4%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 30 7} accuracy is: 70.6%
+Using features {31 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7} accuracy is: 72.2%
+Using features {26 34 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7} accuracy is: 69.3%
+Using features {26 11 14 36 18 39 16 27 23 0 35 12 32 5 28 33 15 7} accuracy is: 72.8%
+Using features {26 11 37 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7} accuracy is: 71.6%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 38 15 7} accuracy is: 70.2%
+
+Best subset: Using features {1 7 15 33 28 5 32 12 0 23 27 16 39 18 36 14 11 26} accuracy is: 73.4%
+
+Using features {2 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1} accuracy is: 72.5%
+Using features {3 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1} accuracy is: 72.3%
+Using features {26 11 14 36 18 39 16 4 27 23 0 12 32 5 28 33 15 7 1} accuracy is: 70.8%
+Using features {6 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1} accuracy is: 71.1%
+Using features {8 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1} accuracy is: 71%
+Using features {26 11 14 36 18 39 16 27 23 0 12 9 32 5 28 33 15 7 1} accuracy is: 71.7%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 10 33 15 7 1} accuracy is: 71.6%
+Using features {26 11 14 13 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1} accuracy is: 70.7%
+Using features {17 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1} accuracy is: 69.3%
+Using features {19 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1} accuracy is: 70.7%
+Using features {20 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1} accuracy is: 71.8%
+Using features {21 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1} accuracy is: 70.3%
+Using features {22 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1} accuracy is: 71.3%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 24 1} accuracy is: 71.2%
+Using features {25 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1} accuracy is: 71.1%
+Using features {29 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1} accuracy is: 72.7%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 30 7 1} accuracy is: 69.3%
+Using features {31 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1} accuracy is: 73.2%
+Using features {26 34 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1} accuracy is: 70.7%
+Using features {26 11 14 36 18 39 16 27 23 0 35 12 32 5 28 33 15 7 1} accuracy is: 72.1%
+Using features {26 11 37 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1} accuracy is: 71.4%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 38 15 7 1} accuracy is: 70.9%
+
+Best subset: Using features {31 1 7 15 33 28 5 32 12 0 23 27 16 39 18 36 14 11 26} accuracy is: 73.2%
+
+Using features {2 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31} accuracy is: 73.1%
+Using features {3 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31} accuracy is: 73%
+Using features {26 11 14 36 18 39 16 4 27 23 0 12 32 5 28 33 15 7 1 31} accuracy is: 70.1%
+Using features {6 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31} accuracy is: 70.6%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 8 31} accuracy is: 71.3%
+Using features {26 11 14 36 18 39 16 27 23 0 12 9 32 5 28 33 15 7 1 31} accuracy is: 72.4%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 10 33 15 7 1 31} accuracy is: 70.8%
+Using features {26 11 14 13 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31} accuracy is: 71%
+Using features {17 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31} accuracy is: 71.1%
+Using features {19 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31} accuracy is: 70.5%
+Using features {20 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31} accuracy is: 73.7%
+Using features {21 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31} accuracy is: 71.3%
+Using features {22 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31} accuracy is: 71.4%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 24 1 31} accuracy is: 71.9%
+Using features {25 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31} accuracy is: 72%
+Using features {29 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31} accuracy is: 74.1%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 30 7 1 31} accuracy is: 69.8%
+Using features {26 34 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31} accuracy is: 70.6%
+Using features {26 11 14 36 18 39 16 27 23 0 35 12 32 5 28 33 15 7 1 31} accuracy is: 72.8%
+Using features {26 11 37 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31} accuracy is: 72.5%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 38 15 7 1 31} accuracy is: 70.8%
+
+Best subset: Using features {29 31 1 7 15 33 28 5 32 12 0 23 27 16 39 18 36 14 11 26} accuracy is: 74.1%
+
+Using features {2 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29} accuracy is: 74.1%
+Using features {3 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29} accuracy is: 73.8%
+Using features {26 11 14 36 18 39 16 4 27 23 0 12 32 5 28 33 15 7 1 31 29} accuracy is: 71.1%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 6 29} accuracy is: 71.6%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 8 31 29} accuracy is: 72.6%
+Using features {26 11 14 36 18 39 16 27 23 0 12 9 32 5 28 33 15 7 1 31 29} accuracy is: 72.4%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 10 33 15 7 1 31 29} accuracy is: 71%
+Using features {26 11 14 13 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29} accuracy is: 71.7%
+Using features {17 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29} accuracy is: 73%
+Using features {19 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29} accuracy is: 71.5%
+Using features {20 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29} accuracy is: 73.3%
+Using features {21 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29} accuracy is: 70.1%
+Using features {22 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29} accuracy is: 70.8%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 24 1 31 29} accuracy is: 71.7%
+Using features {25 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29} accuracy is: 72.5%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 30 7 1 31 29} accuracy is: 71.5%
+Using features {26 34 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29} accuracy is: 71.1%
+Using features {26 11 14 36 18 39 16 27 23 0 35 12 32 5 28 33 15 7 1 31 29} accuracy is: 72.1%
+Using features {26 11 37 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29} accuracy is: 71.5%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 38 15 7 1 31 29} accuracy is: 71.2%
+
+Best subset: Using features {2 29 31 1 7 15 33 28 5 32 12 0 23 27 16 39 18 36 14 11 26} accuracy is: 74.1%
+
+Using features {3 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2} accuracy is: 72.9%
+Using features {26 11 14 36 18 39 16 4 27 23 0 12 32 5 28 33 15 7 1 31 29 2} accuracy is: 72%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 6 29 2} accuracy is: 72.6%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 8 31 29 2} accuracy is: 71.9%
+Using features {26 11 14 36 18 39 16 27 23 0 12 9 32 5 28 33 15 7 1 31 29 2} accuracy is: 72.5%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 10 33 15 7 1 31 29 2} accuracy is: 73.2%
+Using features {26 11 14 13 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2} accuracy is: 72.9%
+Using features {17 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2} accuracy is: 72.2%
+Using features {19 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2} accuracy is: 71.9%
+Using features {20 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2} accuracy is: 74.1%
+Using features {21 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2} accuracy is: 71.2%
+Using features {22 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2} accuracy is: 71.4%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 24 1 31 29 2} accuracy is: 73.1%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 25 2} accuracy is: 72.7%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 30 7 1 31 29 2} accuracy is: 71.2%
+Using features {26 34 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2} accuracy is: 70.7%
+Using features {26 11 14 36 18 39 16 27 23 0 35 12 32 5 28 33 15 7 1 31 29 2} accuracy is: 72.5%
+Using features {26 11 37 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2} accuracy is: 70.3%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 38 15 7 1 31 29 2} accuracy is: 71.6%
+
+Best subset: Using features {20 2 29 31 1 7 15 33 28 5 32 12 0 23 27 16 39 18 36 14 11 26} accuracy is: 74.1%
+
+Using features {3 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 73.7%
+Using features {26 11 14 36 18 39 16 4 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 71.7%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 6 29 2 20} accuracy is: 72.2%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 8 31 29 2 20} accuracy is: 72.4%
+Using features {26 11 14 36 18 39 16 27 23 0 12 9 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 73%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 10 33 15 7 1 31 29 2 20} accuracy is: 71.1%
+Using features {26 11 14 13 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 71.8%
+Using features {17 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 70.8%
+Using features {19 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 70.6%
+Using features {21 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 73.1%
+Using features {22 26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 72.5%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 24 1 31 29 2 20} accuracy is: 73.5%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 25 2 20} accuracy is: 72.8%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 30 7 1 31 29 2 20} accuracy is: 71.9%
+Using features {26 34 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 71.5%
+Using features {26 11 14 36 18 39 16 27 23 0 35 12 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 72%
+Using features {26 11 37 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 71.8%
+Using features {26 11 14 36 18 39 16 27 23 0 12 32 5 28 33 38 15 7 1 31 29 2 20} accuracy is: 71.9%
+
+Best subset: Using features {20 2 29 31 1 7 15 33 28 5 32 12 0 23 27 16 39 18 36 14 11 3 26} accuracy is: 73.7%
+
+Using features {4 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 70.4%
+Using features {6 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 70.9%
+Using features {8 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 71%
+Using features {9 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 71%
+Using features {10 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 72%
+Using features {13 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 71.3%
+Using features {17 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 71.1%
+Using features {19 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 70.5%
+Using features {21 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 72.1%
+Using features {22 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 70.9%
+Using features {24 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 71.6%
+Using features {25 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 71.5%
+Using features {30 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 72.7%
+Using features {34 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 69.8%
+Using features {35 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 70.7%
+Using features {37 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 70.6%
+Using features {38 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20} accuracy is: 73%
+
+Best subset: Using features {38 20 2 29 31 1 7 15 33 28 5 32 12 0 23 27 16 39 18 36 14 11 3 26} accuracy is: 73%
+
+Using features {4 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38} accuracy is: 70%
+Using features {6 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38} accuracy is: 71.7%
+Using features {8 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38} accuracy is: 70.6%
+Using features {9 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38} accuracy is: 70.9%
+Using features {10 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38} accuracy is: 70.6%
+Using features {13 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38} accuracy is: 70.1%
+Using features {17 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38} accuracy is: 70.3%
+Using features {19 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38} accuracy is: 71.1%
+Using features {21 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38} accuracy is: 72.3%
+Using features {22 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38} accuracy is: 69.4%
+Using features {24 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38} accuracy is: 70.7%
+Using features {25 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38} accuracy is: 71.7%
+Using features {30 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38} accuracy is: 71.5%
+Using features {34 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38} accuracy is: 71%
+Using features {35 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38} accuracy is: 70.9%
+Using features {37 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38} accuracy is: 70.6%
+
+Best subset: Using features {21 38 20 2 29 31 1 7 15 33 28 5 32 12 0 23 27 16 39 18 36 14 11 3 26} accuracy is: 72.3%
+
+Using features {4 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21} accuracy is: 69.6%
+Using features {6 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21} accuracy is: 71.8%
+Using features {8 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21} accuracy is: 69.5%
+Using features {9 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21} accuracy is: 71.5%
+Using features {10 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21} accuracy is: 69.9%
+Using features {13 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21} accuracy is: 70.3%
+Using features {17 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21} accuracy is: 71.5%
+Using features {19 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21} accuracy is: 70.7%
+Using features {22 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21} accuracy is: 69.7%
+Using features {24 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21} accuracy is: 71.9%
+Using features {25 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21} accuracy is: 71.2%
+Using features {30 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21} accuracy is: 71.1%
+Using features {34 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21} accuracy is: 70.4%
+Using features {35 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21} accuracy is: 71.5%
+Using features {37 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21} accuracy is: 69.7%
+
+Best subset: Using features {24 21 38 20 2 29 31 1 7 15 33 28 5 32 12 0 23 27 16 39 18 36 14 11 3 26} accuracy is: 71.9%
+
+Using features {4 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24} accuracy is: 70.4%
+Using features {6 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24} accuracy is: 71%
+Using features {8 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24} accuracy is: 69.8%
+Using features {9 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24} accuracy is: 72.4%
+Using features {10 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24} accuracy is: 69.6%
+Using features {13 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24} accuracy is: 68.8%
+Using features {17 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24} accuracy is: 68.8%
+Using features {19 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24} accuracy is: 71.7%
+Using features {22 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24} accuracy is: 69.6%
+Using features {25 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24} accuracy is: 72.1%
+Using features {30 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24} accuracy is: 69.2%
+Using features {34 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24} accuracy is: 70%
+Using features {35 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24} accuracy is: 70.4%
+Using features {37 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24} accuracy is: 69.7%
+
+Best subset: Using features {9 24 21 38 20 2 29 31 1 7 15 33 28 5 32 12 0 23 27 16 39 18 36 14 11 3 26} accuracy is: 72.4%
+
+Using features {4 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9} accuracy is: 70.4%
+Using features {6 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9} accuracy is: 72.2%
+Using features {8 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9} accuracy is: 71.7%
+Using features {10 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9} accuracy is: 71.3%
+Using features {13 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9} accuracy is: 70.8%
+Using features {17 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9} accuracy is: 70.6%
+Using features {19 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9} accuracy is: 72.2%
+Using features {22 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9} accuracy is: 72.3%
+Using features {25 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9} accuracy is: 71.6%
+Using features {30 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9} accuracy is: 71%
+Using features {34 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9} accuracy is: 71.8%
+Using features {35 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9} accuracy is: 71.8%
+Using features {37 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9} accuracy is: 70.8%
+
+Best subset: Using features {22 9 24 21 38 20 2 29 31 1 7 15 33 28 5 32 12 0 23 27 16 39 18 36 14 11 3 26} accuracy is: 72.3%
+
+Using features {4 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22} accuracy is: 68.9%
+Using features {6 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22} accuracy is: 70.6%
+Using features {8 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22} accuracy is: 70.6%
+Using features {10 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22} accuracy is: 69.3%
+Using features {13 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22} accuracy is: 69.8%
+Using features {17 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22} accuracy is: 69.6%
+Using features {19 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22} accuracy is: 71%
+Using features {25 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22} accuracy is: 71.8%
+Using features {30 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22} accuracy is: 69.7%
+Using features {34 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22} accuracy is: 71%
+Using features {35 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22} accuracy is: 69.8%
+Using features {37 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22} accuracy is: 69.2%
+
+Best subset: Using features {25 22 9 24 21 38 20 2 29 31 1 7 15 33 28 5 32 12 0 23 27 16 39 18 36 14 11 3 26} accuracy is: 71.8%
+
+Using features {4 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25} accuracy is: 69%
+Using features {6 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25} accuracy is: 70.6%
+Using features {8 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25} accuracy is: 70.9%
+Using features {10 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25} accuracy is: 68.8%
+Using features {13 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25} accuracy is: 69.6%
+Using features {17 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25} accuracy is: 70%
+Using features {19 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25} accuracy is: 71.5%
+Using features {30 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25} accuracy is: 69.4%
+Using features {34 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25} accuracy is: 70.8%
+Using features {35 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25} accuracy is: 69.5%
+Using features {37 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25} accuracy is: 69.1%
+
+Best subset: Using features {19 25 22 9 24 21 38 20 2 29 31 1 7 15 33 28 5 32 12 0 23 27 16 39 18 36 14 11 3 26} accuracy is: 71.5%
+
+Using features {4 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19} accuracy is: 70.7%
+Using features {6 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19} accuracy is: 70.9%
+Using features {8 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19} accuracy is: 70.3%
+Using features {10 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19} accuracy is: 69.5%
+Using features {13 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19} accuracy is: 69.7%
+Using features {17 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19} accuracy is: 70.1%
+Using features {30 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19} accuracy is: 69.6%
+Using features {34 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19} accuracy is: 71.3%
+Using features {35 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19} accuracy is: 70.6%
+Using features {37 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19} accuracy is: 69.2%
+
+Best subset: Using features {34 19 25 22 9 24 21 38 20 2 29 31 1 7 15 33 28 5 32 12 0 23 27 16 39 18 36 14 11 3 26} accuracy is: 71.3%
+
+Using features {4 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34} accuracy is: 70.8%
+Using features {6 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34} accuracy is: 70.2%
+Using features {8 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34} accuracy is: 71.2%
+Using features {10 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34} accuracy is: 69.3%
+Using features {13 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34} accuracy is: 70%
+Using features {17 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34} accuracy is: 70.6%
+Using features {30 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34} accuracy is: 69.2%
+Using features {35 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34} accuracy is: 71.1%
+Using features {37 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34} accuracy is: 68%
+
+Best subset: Using features {8 34 19 25 22 9 24 21 38 20 2 29 31 1 7 15 33 28 5 32 12 0 23 27 16 39 18 36 14 11 3 26} accuracy is: 71.2%
+
+Using features {4 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8} accuracy is: 70%
+Using features {6 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8} accuracy is: 69.7%
+Using features {10 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8} accuracy is: 69.1%
+Using features {13 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8} accuracy is: 70.4%
+Using features {17 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8} accuracy is: 71.1%
+Using features {30 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8} accuracy is: 69.9%
+Using features {35 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8} accuracy is: 70.2%
+Using features {37 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8} accuracy is: 69.1%
+
+Best subset: Using features {17 8 34 19 25 22 9 24 21 38 20 2 29 31 1 7 15 33 28 5 32 12 0 23 27 16 39 18 36 14 11 3 26} accuracy is: 71.1%
+
+Using features {4 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17} accuracy is: 70.6%
+Using features {6 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17} accuracy is: 70.1%
+Using features {10 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17} accuracy is: 70.3%
+Using features {13 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17} accuracy is: 70.3%
+Using features {30 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17} accuracy is: 69.9%
+Using features {35 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17} accuracy is: 69.8%
+Using features {37 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17} accuracy is: 68.6%
+
+Best subset: Using features {4 17 8 34 19 25 22 9 24 21 38 20 2 29 31 1 7 15 33 28 5 32 12 0 23 27 16 39 18 36 14 11 3 26} accuracy is: 70.6%
+
+Using features {6 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17 4} accuracy is: 68.4%
+Using features {10 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17 4} accuracy is: 69.2%
+Using features {13 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17 4} accuracy is: 68.6%
+Using features {30 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17 4} accuracy is: 68.2%
+Using features {35 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17 4} accuracy is: 69.8%
+Using features {37 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17 4} accuracy is: 67.4%
+
+Best subset: Using features {35 4 17 8 34 19 25 22 9 24 21 38 20 2 29 31 1 7 15 33 28 5 32 12 0 23 27 16 39 18 36 14 11 3 26} accuracy is: 69.8%
+
+Using features {6 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17 4 35} accuracy is: 68.7%
+Using features {10 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17 4 35} accuracy is: 68%
+Using features {13 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17 4 35} accuracy is: 67.8%
+Using features {30 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17 4 35} accuracy is: 66%
+Using features {37 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17 4 35} accuracy is: 66.2%
+
+Best subset: Using features {6 35 4 17 8 34 19 25 22 9 24 21 38 20 2 29 31 1 7 15 33 28 5 32 12 0 23 27 16 39 18 36 14 11 3 26} accuracy is: 68.7%
+
+Using features {10 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17 4 35 6} accuracy is: 67%
+Using features {13 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17 4 35 6} accuracy is: 66.1%
+Using features {30 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17 4 35 6} accuracy is: 64.9%
+Using features {37 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17 4 35 6} accuracy is: 64.6%
+
+Best subset: Using features {10 6 35 4 17 8 34 19 25 22 9 24 21 38 20 2 29 31 1 7 15 33 28 5 32 12 0 23 27 16 39 18 36 14 11 3 26} accuracy is: 67%
+
+Using features {13 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17 4 35 6 10} accuracy is: 62.8%
+Using features {30 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17 4 35 6 10} accuracy is: 62.7%
+Using features {37 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17 4 35 6 10} accuracy is: 61.8%
+
+Best subset: Using features {13 10 6 35 4 17 8 34 19 25 22 9 24 21 38 20 2 29 31 1 7 15 33 28 5 32 12 0 23 27 16 39 18 36 14 11 3 26} accuracy is: 62.8%
+
+Using features {30 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17 4 35 6 10 13} accuracy is: 58.9%
+Using features {37 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17 4 35 6 10 13} accuracy is: 58.7%
+
+Best subset: Using features {30 13 10 6 35 4 17 8 34 19 25 22 9 24 21 38 20 2 29 31 1 7 15 33 28 5 32 12 0 23 27 16 39 18 36 14 11 3 26} accuracy is: 58.9%
+
+Using features {37 26 3 11 14 36 18 39 16 27 23 0 12 32 5 28 33 15 7 1 31 29 2 20 38 21 24 9 22 25 19 34 8 17 4 35 6 10 13 30} accuracy is: 53.8%
+
+Best subset: Using features {37 30 13 10 6 35 4 17 8 34 19 25 22 9 24 21 38 20 2 29 31 1 7 15 33 28 5 32 12 0 23 27 16 39 18 36 14 11 3 26} accuracy is: 53.8%
+
+ Search Finished ! The best feature subset was {0 26 } with an accuracy of 95.5%

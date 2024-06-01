@@ -19,6 +19,7 @@ private:
     vector<int> featureSubset;
     // int numDataPoints;
     int numFeatures;
+    double maxClass;
 
 public:
     Classifier(vector<int> featureSubsetInput);

@@ -23,8 +23,6 @@ void Classifier::train(string dataLoc)
     // Read data from file and store in vector
     string mystring;
     std::vector<double> featureVector;
-    // Get lines from the file, turn to double and then add to the feature vector
-    cout << "Beggining Training\n";
     std::clock_t start  = std::clock();
 
     while (getline(inputFile, mystring))
@@ -41,30 +39,35 @@ void Classifier::train(string dataLoc)
     // Get the number of features
     numFeatures = data[0].size() - 1;
     inputFile.close();
-    // print();
-    // normalize the data to fit between 0 and 1 for all features
-    // starting at 1 so that we dont normalize the class
+    //Count membership of each class and return the most popular class
+    vector<int> classCount(2, 0);
+    for (int i = 0; i < data.size(); i++)
+    {
+        classCount[static_cast<int>(data[i][0])-1]++;
+    }
+    maxClass = classCount[0] > classCount[1] ? 1 : 2;
+
+ 
+
+    //normalize
     for (int i = 1; i <= numFeatures; i++)
     {
         normalize(i);
     }
     std::clock_t end  = std::clock();
     double timeTaken = (end - start)/(double)CLOCKS_PER_SEC;
-    cout << "Training Finished.Time taken: " << timeTaken << "'s\n";
-    // printing the data vector
-    // print();
 }
 
 // Predict the class label for a given feature vector
 // This is for a user to use to predict label for new data
 int Classifier::test(vector<double> &features)
 {
+     if(featureSubset.size() == 0){
+        return maxClass;
+    }
     // Normalize the features
     normalizeFeatures(features);
 
-    // Find the nearest neighbor
-
-    // Return the class label of the nearest neighbor
     return nn(features);
 }
 
@@ -72,17 +75,15 @@ int Classifier::test(vector<double> &features)
 // This is for the validator to use to predict label for the test data
 int Classifier::test(int id)
 {
+     if(featureSubset.size() == 0){
+        return maxClass;
+    }
     // No need to normalize the features since they are already normalized
     if (id < 0 || id >= data.size())
     {
         throw out_of_range("ID is out of bounds!");
         return -1;
     }
-
-    // Find the nearest neighbor
-    // Remember to skip the id itself
-
-    // Return the class label of the nearest neighbor
     return nn(id);
 }
 
@@ -92,7 +93,8 @@ int Classifier::test(int id)
 
 // Calculate the Euclidean distance between two data points
 double Classifier::distance(const vector<double> &features, int row) const
-{
+{   
+    //cout << featureSubset.size() << endl;
     // make sure row is in range
     if (row < 0 || row >= data.size())
     {
@@ -119,7 +121,7 @@ double Classifier::distance(const vector<double> &features, int row) const
             featindex - (datapoint.size() - features.size()) >= features.size())
         {
             throw out_of_range("Index adjustment out of bounds");
-        } // if that feat is out of range
+        }
 
         // calculate diff between feature value
         double diff = features[featindex - (datapoint.size() - features.size())] -
@@ -152,6 +154,7 @@ void Classifier::normalize(int col)
     temp.push_back(minVal);
     temp.push_back(maxVal);
     normalizingData.push_back(temp);
+
     // Normalize the values in the specified column
     for (auto &featureVector : data)
     {
@@ -206,7 +209,6 @@ void Classifier::normalizeFeatures(vector<double> &features)
 // Function to print a 2D vector with the index as the id
 void Classifier::print()
 {
-    // Print the table header
     cout << "--------------------------------------------------------------------"
             "-------------------------"
          << endl;
@@ -220,7 +222,6 @@ void Classifier::print()
             "-------------------------"
          << endl;
 
-    // Print the table rows
     for (int i = 0; i < data.size(); i++)
     {
         printf("%d\t", i);
@@ -232,13 +233,8 @@ void Classifier::print()
     }
 }
 
-// Get the number of features
 int Classifier::getNumFeatures() { return numFeatures; }
 
-// Get the number of data points
 int Classifier::getNumDataPoints() { return data.size(); }
 
-const vector<vector<double> > &Classifier::getData() const
-{
-    return data;
-}
+const vector<vector<double> > &Classifier::getData() const { return data; }

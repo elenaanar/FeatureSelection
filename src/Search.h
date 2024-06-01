@@ -4,6 +4,7 @@
 #include <ctime>
 #include <algorithm>
 #include <unordered_map>
+#include "Validator.h"
 
 #ifndef _SEARCH_H_
 #define _SEARCH_H_
@@ -19,9 +20,9 @@ struct Node
 class Search
 {
 public:
-  double evaluate(const unordered_map<int, bool> &);
-  unordered_map<int, bool> greedyForward(int);
-  unordered_map<int, bool> greedyBackward(int);
+  double evaluate(const unordered_map<int, bool> &, string);
+  unordered_map<int, bool> greedyForward(int, string);
+  unordered_map<int, bool> greedyBackward(int, string);
   double bestAccuracy;
 };
 
