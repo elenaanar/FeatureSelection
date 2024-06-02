@@ -14,8 +14,8 @@ using namespace std;
 
 int main(int argc, char **argv)
 {
-    if (argc < 2){
-        cout << "Usage: ./executable filepath" << endl;
+    if (argc < 3){
+        cout << "Usage: ./executable filepath algoChoiceNum" << endl;
         return 1; 
     }
 
