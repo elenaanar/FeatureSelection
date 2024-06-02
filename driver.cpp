@@ -7,8 +7,8 @@
 using namespace std;
 
 void* run(vector<string> data){
-    std::string command = "./project " + data[0] + " " + data[1]+ " > " + data[2];
-    int result = std::system(command.c_str());
+    string command = "./project " + data[0] + " " + data[1]+ " > " + data[2];
+    int result = system(command.c_str());
     if (result == 0){
         cout << "Success" << endl;
     } else {
@@ -22,23 +22,23 @@ int main() {
     //{{"data/small14.txt", "1", "output1.txt"}, {"data/small14.txt", "2", "output2.txt"}, {"data/large14.txt", "1", "output3.txt"}, {"data/large14.txt", "2", "output4.txt"}};
     vector<string> temp;
     temp.push_back("data/small14.txt");
-    temp.push_back("1");
-    temp.push_back("output1.txt");
+    temp.push_back("1"); //forward
+    temp.push_back("output/output1.txt");
     data.push_back(temp);
     temp.clear();
     temp.push_back("data/small14.txt");
-    temp.push_back("2");
-    temp.push_back("output2.txt");
+    temp.push_back("2"); //backward
+    temp.push_back("output/output2.txt");
     data.push_back(temp);
     temp.clear();
     temp.push_back("data/large14.txt");
-    temp.push_back("1");
-    temp.push_back("output3.txt");
+    temp.push_back("1"); //forward
+    temp.push_back("output/output3.txt");
     data.push_back(temp);
     temp.clear();
     temp.push_back("data/large14.txt");
-    temp.push_back("2");
-    temp.push_back("output4.txt");
+    temp.push_back("2"); //backward
+    temp.push_back("output/output4.txt");
     data.push_back(temp);
     temp.clear();
 
@@ -46,6 +46,5 @@ int main() {
         run(data[i]);
     }
     
-
     return 0;
 }
