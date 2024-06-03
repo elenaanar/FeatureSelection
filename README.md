@@ -22,7 +22,7 @@ Input 2 for Backward Feature Selection
 INTRODUCTION:
 - Add forward feature selection
 - Add backward feature selection
-- Use randome evaluation function
+- Use random evaluation function
 
 PART 2:
 - Add NN Classifier
