@@ -947,4 +947,4 @@ Using features {8 13 36 31 21 32 4 27 15 14 19 29 6 18 17 30 34 20 10 25 2 5 23 
 
 Best subset: Using features {8 11 28 39 22 24 7 9 35 12 1 38 26 37 16 40 33 3 23 5 2 25 10 20 34 30 17 18 6 29 19 14 15 27 4 32 21 31 36 13} accuracy is: 57.7%
 
- Search Finished ! The best feature subset was {31 12 } with an accuracy of 97.3%
+ Search Finished ! The best feature subset was {32 13 } with an accuracy of 97.3%

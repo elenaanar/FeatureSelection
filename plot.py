@@ -50,8 +50,8 @@ def plot_data(data, feature_indices):
 
 def main():
     data_paths = {
-        "1": "data/small-test-dataset.txt",
-        "2": "data/large-test-dataset.txt",
+        "1": "data/normalizedDataSmall.txt",
+        "2": "data/normalizedDataLarge.txt",
         "3": "data/small14.txt",
         "4": "data/large14.txt"
     }

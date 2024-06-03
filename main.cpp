@@ -59,7 +59,7 @@ int main(int argc, char **argv)
         cout << " Search Finished ! The best feature subset was {";
         for (auto it = subset.begin(); it != subset.end(); ++it)
         {
-            cout << it->first << " ";
+            cout << it->first + 1 << " ";
         }
 
         if (subset.size() == 0)
@@ -73,7 +73,7 @@ int main(int argc, char **argv)
         cout << " Search Finished ! The best feature subset was {";
         for (auto it = subset.begin(); it != subset.end(); ++it)
         {
-            cout << it->first << " ";
+            cout << it->first + 1 << " ";
         }
 
         if (subset.size() == 0)
