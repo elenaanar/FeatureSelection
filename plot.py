@@ -21,7 +21,19 @@ def plot_data(data, feature_indices):
     print("Class column:", class_column)
     print("Feature columns:", features)
     print("Feature indices to plot:", feature_indices)
-
+    #use a scatter plot for 1D plot
+    if len(feature_indices) == 1:
+        plt.figure(figsize=(10, 6))
+        sns.scatterplot(x=data.iloc[:, feature_indices[0]], 
+                        y=0, 
+                        hue=data[class_column], 
+                        palette={1: 'blue', 2: 'red'},
+                        style=data[class_column],
+                        markers={1: 'o', 2: 's'})
+        plt.xlabel(features[feature_indices[0] - 1])
+        plt.ylabel("Class")
+        plt.title('1D Feature Plot')
+        plt.show()
     if len(feature_indices) == 2:
         plt.figure(figsize=(10, 6))
         sns.scatterplot(x=data.iloc[:, feature_indices[0]], 
@@ -52,8 +64,8 @@ def main():
     data_paths = {
         "1": "data/normalizedDataSmall.txt",
         "2": "data/normalizedDataLarge.txt",
-        "3": "data/small14.txt",
-        "4": "data/large14.txt"
+        "3": "normalizedDataSmall.txt",
+        "4": "normalizedDatalarge.txt"
     }
 
     print("Choose a dataset to plot:")
@@ -75,8 +87,8 @@ def main():
     print(data.head())
 
     # Step 2: Ask if the user would like to plot 2 or 3 features
-    plot_type = input("Would you like to plot 2 or 3 features? (Enter 2 or 3): ")
-    if plot_type not in ['2', '3']:
+    plot_type = input("Would you like to plot 2 or 3 features? (Enter 1 or 2 or 3): ")
+    if plot_type not in ['1', '2', '3']:
         print("Invalid input. Please enter 2 or 3.")
         return
 

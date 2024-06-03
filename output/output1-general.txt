@@ -1,0 +1,97 @@
+ Welcome to JAKLE's Feature Selection Algorithm
+
+Using a random evalation, with no features, I get an accuracy of 7.82637e-06
+Number of features: 10
+--------------------------
+Greedy Forward Search:
+--------------------------
+Using features {} accuracy is: 75%
+
+Using features {1} accuracy is: 57%
+Using features {2} accuracy is: 54%
+Using features {3} accuracy is: 68%
+Using features {4} accuracy is: 65%
+Using features {5} accuracy is: 75%
+Using features {6} accuracy is: 61%
+Using features {7} accuracy is: 62%
+Using features {8} accuracy is: 60%
+Using features {9} accuracy is: 66%
+Using features {10} accuracy is: 64%
+
+Best subset: Using features {5} accuracy is: 75%
+
+Using features {1 5} accuracy is: 75%
+Using features {2 5} accuracy is: 80%
+Using features {3 5} accuracy is: 92%
+Using features {4 5} accuracy is: 76%
+Using features {6 5} accuracy is: 79%
+Using features {7 5} accuracy is: 80%
+Using features {8 5} accuracy is: 77%
+Using features {9 5} accuracy is: 73%
+Using features {10 5} accuracy is: 81%
+
+Best subset: Using features {3 5} accuracy is: 92%
+
+Using features {1 5 3} accuracy is: 85%
+Using features {2 5 3} accuracy is: 80%
+Using features {4 5 3} accuracy is: 82%
+Using features {6 5 3} accuracy is: 82%
+Using features {7 5 3} accuracy is: 91%
+Using features {5 8 3} accuracy is: 79%
+Using features {9 5 3} accuracy is: 84%
+Using features {10 5 3} accuracy is: 85%
+
+Best subset: Using features {7 3 5} accuracy is: 91%
+
+Using features {1 5 3 7} accuracy is: 88%
+Using features {5 3 2 7} accuracy is: 83%
+Using features {4 5 3 7} accuracy is: 78%
+Using features {6 5 3 7} accuracy is: 86%
+Using features {5 8 3 7} accuracy is: 79%
+Using features {9 5 3 7} accuracy is: 81%
+Using features {10 5 3 7} accuracy is: 84%
+
+Best subset: Using features {1 7 3 5} accuracy is: 88%
+
+Using features {5 3 2 7 1} accuracy is: 78%
+Using features {4 5 3 7 1} accuracy is: 75%
+Using features {5 3 7 6 1} accuracy is: 85%
+Using features {5 8 3 7 1} accuracy is: 74%
+Using features {9 5 3 7 1} accuracy is: 72%
+Using features {10 5 3 7 1} accuracy is: 74%
+
+Best subset: Using features {6 1 7 3 5} accuracy is: 85%
+
+Using features {2 5 3 7 1 6} accuracy is: 77%
+Using features {4 5 3 7 1 6} accuracy is: 72%
+Using features {8 5 3 7 1 6} accuracy is: 75%
+Using features {9 5 3 7 1 6} accuracy is: 70%
+Using features {10 5 3 7 1 6} accuracy is: 70%
+
+Best subset: Using features {2 6 1 7 3 5} accuracy is: 77%
+
+Using features {4 5 3 7 1 6 2} accuracy is: 73%
+Using features {8 5 3 7 1 6 2} accuracy is: 65%
+Using features {9 5 3 7 1 6 2} accuracy is: 73%
+Using features {10 5 3 7 1 6 2} accuracy is: 68%
+
+Best subset: Using features {4 2 6 1 7 3 5} accuracy is: 73%
+
+Using features {8 5 3 7 1 6 2 4} accuracy is: 64%
+Using features {9 5 3 7 1 6 2 4} accuracy is: 69%
+Using features {10 5 3 7 1 6 2 4} accuracy is: 68%
+
+Best subset: Using features {9 4 2 6 1 7 3 5} accuracy is: 69%
+
+Using features {8 5 3 7 1 6 2 4 9} accuracy is: 69%
+Using features {10 5 3 7 1 6 2 4 9} accuracy is: 72%
+
+Best subset: Using features {10 9 4 2 6 1 7 3 5} accuracy is: 72%
+
+Using features {8 5 3 7 1 6 2 4 9 10} accuracy is: 68%
+
+Best subset: Using features {8 10 9 4 2 6 1 7 3 5} accuracy is: 68%
+
+ Search Finished ! The best feature subset was {3 5 } with an accuracy of 92%
+Elapsed time: 0.101227 seconds
+
