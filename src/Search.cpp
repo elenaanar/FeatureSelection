@@ -1,10 +1,19 @@
 #include "Search.h"
 
-double Search::evaluate(const unordered_map<int, bool> &subset)
+//calls the validate feature function from the validator class
+double Search::evaluate(const unordered_map<int, bool> &subset, string dataLoc)
 {
-  return static_cast<double>(rand()) / RAND_MAX;
+  vector<int> featureSubset;
+  for (const auto &[feature, value] : subset)
+  {
+    featureSubset.push_back(feature + 1);
+  }
+  Validator validator;
+  return validator.validate(featureSubset, dataLoc);
 }
 
+
+//prints the features and accuracy
 void printFeatures(const unordered_map<int, bool> &subset, double accuracy)
 {
   cout << "Using features {";
@@ -13,29 +22,34 @@ void printFeatures(const unordered_map<int, bool> &subset, double accuracy)
   {
     if (i < subset.size() - 1)
     {
-      cout << it->first << " ";
+      cout << it->first + 1 << " ";
     }
     else
     {
-      cout << it->first;
+      cout << it->first + 1;
     }
   }
   cout << "} accuracy is: " << accuracy * 100 << "%" << endl;
 }
 
-unordered_map<int, bool> Search::greedyBackward(int totalFeatures)
+
+//greedy backward search
+unordered_map<int, bool> Search::greedyBackward(int totalFeatures, string dataLoc)
 {
   cout << "--------------------------" << endl; // added for clarity
   cout << "Greedy Backward Search:" << endl;
   cout << "--------------------------" << endl; // added for clarity
+
   srand(time(NULL));
   unordered_map<int, bool> currSubset;
   for (unsigned i = 0; i < totalFeatures; ++i)
   {
     currSubset[i] = true;
   }
+
+  
   unordered_map<int, bool> globalBestSubset = currSubset;
-  double globalBestAcc = evaluate(currSubset);
+  double globalBestAcc = evaluate(currSubset, dataLoc);
   printFeatures(currSubset, globalBestAcc);
   cout << endl;
 
@@ -47,7 +61,7 @@ unordered_map<int, bool> Search::greedyBackward(int totalFeatures)
     {
       unordered_map<int, bool> tempset = currSubset;
       tempset.erase(feature); // explore next feature
-      double a = evaluate(tempset);
+      double a = evaluate(tempset, dataLoc);
       printFeatures(tempset, a);
       if (a > currBestAcc)
       { // if feature yields less accuracy than last, set as worst feat
@@ -75,7 +89,7 @@ unordered_map<int, bool> Search::greedyBackward(int totalFeatures)
   return globalBestSubset;
 }
 
-unordered_map<int, bool> Search::greedyForward(int totalFeatures)
+unordered_map<int, bool> Search::greedyForward(int totalFeatures, string dataLoc)
 {
   srand(time(NULL));
   cout << "--------------------------" << endl; // added for clarity
@@ -83,7 +97,7 @@ unordered_map<int, bool> Search::greedyForward(int totalFeatures)
   cout << "--------------------------" << endl; // added for clarity
   unordered_map<int, bool> currSubset;
   unordered_map<int, bool> bestSubset;
-  double bestAcc = evaluate(currSubset);
+  double bestAcc = evaluate(currSubset, dataLoc);
   printFeatures(currSubset, bestAcc);
   cout << endl;
   for (unsigned i = 0; i < totalFeatures; ++i)
@@ -98,7 +112,7 @@ unordered_map<int, bool> Search::greedyForward(int totalFeatures)
         unordered_map<int, bool> tempset = currSubset;
         tempset[j] = true; // explore next feature
 
-        double a = evaluate(tempset);
+        double a = evaluate(tempset, dataLoc);
         printFeatures(tempset, a);
         if (a > currBestAcc)
         { // if feature yields more accuracy than last, set as best feat
@@ -120,6 +134,7 @@ unordered_map<int, bool> Search::greedyForward(int totalFeatures)
            << "Best subset: ";
       printFeatures(currSubset, currBestAcc);
       cout << endl;
+      
     }
   }
 

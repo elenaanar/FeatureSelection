@@ -19,6 +19,7 @@ private:
     vector<int> featureSubset;
     // int numDataPoints;
     int numFeatures;
+    double maxClass;
 
 public:
     Classifier(vector<int> featureSubsetInput);
@@ -36,6 +37,7 @@ private:
     int nn(vector<double> &, int excludeRow = -1);
     int nn(int);
     double distance(const vector<double> &, int id2) const;
+    void writeToFile(string fileName);
 };
 
 #endif

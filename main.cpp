@@ -9,133 +9,95 @@
 #include "src/Validator.h"
 #include <iostream>
 #include <vector>
+#include <fstream>
 using namespace std;
 
-// int main() {
-
-//   Search search;
-//   int numFeatures;
-//   int userChoice;
-//   unordered_map<int, bool> subset;
-
-//   cout << " Welcome to JAKLE's Feature Selection Algorithm\n" << endl;
-//   cout << "Please enter total number of features: ";
-//   cin >> numFeatures;
-//   cout << endl;
-//   cout << "Enter the number of the algorithm you'd like to run\n"
-//        << "1.Forward Selection\n"
-//        << "2.Backward Selection\n"
-//        << "3.Special Algorithm to steal data\n " << endl;
-//           cin >>
-//       userChoice;
-//   cout << "Using a random evalation, with no features, I get an accuracy of "
-//   << static_cast<double>(rand()) / RAND_MAX  << endl;
-
-//               switch(userChoice)
-//               {
-//               case 1:
-
-//                   subset = search.greedyForward(numFeatures);
-//                   cout << " Search Finished ! The best feature subset was {"
-//                   ; for(auto it = subset.begin(); it != subset.end(); ++it){
-//                       cout << it->first << " ";
-//                   }
-
-//                   if(subset.size() == 0){
-//                       cout << "No features selected." << endl;
-//                   }
-//                   cout << "} with an accuracy of " << search.bestAccuracy *
-//                   100 <<"%";
-//           break;
-//       case 2:
-//           subset = search.greedyBackward(numFeatures);
-//             cout << " Search Finished ! The best feature subset was {" ;
-//           for(auto it = subset.begin(); it != subset.end(); ++it){
-//               cout << it->first << " ";
-//           }
-
-//           if(subset.size() == 0){
-//               cout << "No features selected." << endl;
-//           }
-//   cout << "} with an accuracy of " << search.bestAccuracy * 100 << "%";
-//   break;
-// case 3:
-//   cout << "UHH under construction can we have data tho pls ;)\n";
-//   break;
-// }
-
-// cout << endl;
-
-// for(auto it = subset2.begin(); it != subset2.end(); ++it){
-//     cout << it->first << " ";
-// }
-
-// if(subset2.size() == 0){
-//     cout << "No features selected." << endl;
-// }
-
-// return 0;
-// }
-
-int main()
+int main(int argc, char **argv)
 {
-    vector<int> featureSubset;
-    // featureSubset.push_back(1);
-    // featureSubset.push_back(2);
-    featureSubset.push_back(1);
-    // featureSubset.push_back(4);
-    featureSubset.push_back(15);
-    // featureSubset.push_back(6);
-    featureSubset.push_back(27);
-    // featureSubset.push_back(8);
-    // featureSubset.push_back(9);
-    // featureSubset.push_back(10);
-    Classifier classifier(featureSubset); // change num features depending on
-                                          // the dataset classifier.train("data/small-test-dataset.txt");
-                                          // cout << classifier.test(0) << endl;
-    cout << "Testing NN-Algorithm and Validator using feature subset {1,15,27} on dataset 'large-test-dataset.txt'\n";
-    Validator validator;
-    double accuracy = validator.validate(featureSubset,"large-test-dataset.txt");
-    cout <<"Accuracy of classifier on feature subset {";
-    for(unsigned int i = 0 ; i < featureSubset.size(); ++i){
-        cout << featureSubset.at(i);
-        if(i != featureSubset.size()-1){
-            cout << ",";
-        }else{
-            cout << "} : " << accuracy << endl;
-        }
+    if (argc < 3){
+        cout << "Usage: ./executable filepath algoChoiceNum" << endl;
+        return 1; 
     }
-    cout << "Testing NN-Algorithm and Validator using feature subset {3,5,7} on dataset 'small-test-dataset.txt'\n";
-    vector<int> featureSubset2;
-    featureSubset2.push_back(3);
-    featureSubset2.push_back(5);
-    featureSubset2.push_back(7);
-    Classifier classifer2(featureSubset2);
-    Validator validator2;
-    accuracy = validator2.validate(featureSubset2,"small-test-dataset.txt");
-    cout <<"Accuracy of classifier on feature subset {";
-    for(unsigned int i = 0 ; i < featureSubset2.size(); ++i){
-        cout << featureSubset2.at(i);
-        if(i != featureSubset2.size()-1){
-            cout << ",";
-        }else{
-            cout << "} : " << accuracy << endl;
-        }
+
+    Search search;
+    string dataLoc = argv[1];
+    int numFeatures = 0;
+    int userChoice = stoi(argv[2]);
+    unordered_map<int, bool> subset;
+
+    cout << " Welcome to JAKLE's Feature Selection Algorithm\n"  << endl;
+    cout << "Using a random evalation, with no features, I get an accuracy of " << static_cast<double>(rand()) / RAND_MAX << endl;
+
+
+    // go through file and get the number of features
+    ifstream inputFile(dataLoc);
+    if (!inputFile.is_open())
+    {
+        std::cerr << "Failed to open data file." << std::endl;
+        return 1;
     }
-    // vector<double> features;
-    // //{5.07, 3.14, 1.29, 0.58, 2.73, 1.91, 4.60, 3.36, 4.03, 2.85}
-    // // datapoint 0 copied from the dataset
-    // features.push_back(5.07);
-    // features.push_back(3.14);
-    // features.push_back(1.29);
-    // features.push_back(0.58);
-    // features.push_back(2.73);
-    // features.push_back(1.91);
-    // features.push_back(4.60);
-    // features.push_back(3.36);
-    // features.push_back(4.03);
-    // features.push_back(2.85);
-    // cout << classifier.test(features) << endl;
+    string mystring;
+    getline(inputFile, mystring);
+    istringstream ss(mystring);
+    double value;
+    while (ss >> value)
+    {
+        numFeatures++;
+    }
+    numFeatures-=1;
+
+
+    cout << "Number of features: " << numFeatures << endl;
+    inputFile.close();
+    
+
+    switch (userChoice)
+    {
+    case 1:
+
+        subset = search.greedyForward(numFeatures, dataLoc);
+        cout << " Search Finished ! The best feature subset was {";
+        for (auto it = subset.begin(); it != subset.end(); ++it)
+        {
+            cout << it->first + 1 << " ";
+        }
+
+        if (subset.size() == 0)
+        {
+            cout << "No features selected." << endl;
+        }
+        cout << "} with an accuracy of " << search.bestAccuracy * 100 << "%";
+        break;
+    case 2:
+        subset = search.greedyBackward(numFeatures, dataLoc);
+        cout << " Search Finished ! The best feature subset was {";
+        for (auto it = subset.begin(); it != subset.end(); ++it)
+        {
+            cout << it->first + 1 << " ";
+        }
+
+        if (subset.size() == 0)
+        {
+            cout << "No features selected.";
+        }
+        cout << "} with an accuracy of " << search.bestAccuracy * 100 << "%";
+        break;
+    case 3:
+        cout << "UHH under construction can we have data tho pls ;)\n";
+        break;
+    }
+
+    cout << endl;
 
     return 0;
 }
+
+// int main(){
+//     Validator validator;
+//     vector<int> featureSubset;
+//     string dataLoc = "data/large14.txt";
+//     featureSubset.push_back(13);
+//     featureSubset.push_back(32);
+//     cout << validator.validate(featureSubset, dataLoc);
+
+// }
