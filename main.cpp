@@ -50,7 +50,8 @@ int main(int argc, char **argv)
     cout << "Number of features: " << numFeatures << endl;
     inputFile.close();
     
-
+    //start reading time
+    clock_t start = clock();
     switch (userChoice)
     {
     case 1:
@@ -86,6 +87,10 @@ int main(int argc, char **argv)
         cout << "UHH under construction can we have data tho pls ;)\n";
         break;
     }
+    //end time
+    clock_t end = clock();
+    double elapsed_time = double(end - start) / CLOCKS_PER_SEC;
+    cout << endl << "Elapsed time: " << elapsed_time << " seconds" << endl;
 
     cout << endl;
 

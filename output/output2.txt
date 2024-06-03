@@ -93,3 +93,5 @@ Using features {} accuracy is: 83%
 Best subset this round: Using features {} accuracy is: 83%
 
  Search Finished ! The best feature subset was {10 2 } with an accuracy of 91%
+Elapsed time: 0.1178 seconds
+

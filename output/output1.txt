@@ -93,3 +93,5 @@ Using features {8 2 7 10 5 1 6 3 9 4} accuracy is: 77%
 Best subset: Using features {8 4 9 3 6 1 5 10 7 2} accuracy is: 77%
 
  Search Finished ! The best feature subset was {5 10 2 } with an accuracy of 93%
+Elapsed time: 0.099843 seconds
+
