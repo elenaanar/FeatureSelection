@@ -1,4 +1,3 @@
-
 #include "Search.h"
 
 //calls the validate feature function from the validator class
